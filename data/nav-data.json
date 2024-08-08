@@ -1,0 +1,185 @@
+[
+  {
+    "title": "Products",
+    "link": "#",
+    "children": [
+      {
+        "title": "Bedroom",
+        "link": "/bedroom",
+        "chiildren": [
+          "Bed",
+          "Bed Slide Table",
+          "Almirah",
+          "Dressing Table",
+          "Dressing Sitter",
+          "Chest of Drawer",
+          "Alna",
+          "Mattress"
+        ]
+      },
+      {
+        "title": " Dining Room",
+        "link": "/Dining Room",
+        "chiildren": [
+          "Dining Set",
+          "Dining Chair",
+          "Showcase",
+          "Side Board",
+          "Oven Box"
+        ]
+      },
+      {
+        "title": "Lifestyle",
+        "link": "/lifestyle",
+        "chiildren": [
+          "Quraan Rehal",
+          "Accent Table",
+          "Iron Stand",
+          "Coffee Chair",
+          "Coffee Table",
+          "Rocking Chair",
+          "Tea Trolley",
+          "Magazine Rack",
+          "Mirror Frame",
+          "Tissue Box",
+          "Side Table",
+          "Shoe Rack",
+          "Showpiece Rack",
+          "Storage"
+        ]
+      },
+
+      {
+        "title": "Living Room",
+        "link": "/living-room",
+        "chiildren": [
+          "Sofa",
+          "Corner Sofa/L Shaped Sofa",
+          "Fabric Sofa",
+          "Center Table",
+          "Divan",
+          "TV Trolley"
+        ]
+      },
+
+      {
+        "title": "Reading Room",
+        "link": "/reading-room",
+        "chiildren": ["Computer Table", "Book Shelf", "Reading Table"]
+      },
+
+      {
+        "title": "Office Furniture",
+        "link": "/office-furniture",
+        "chiildren": [
+          "Office Chair",
+          "Conference Chair",
+          "Swivel Chair",
+          "Visitor Chair",
+          "Classroom Chair",
+          "Office Table",
+          "Computer Table",
+          "Conference Table",
+          "Drawer Unit",
+          "Office Cabinet",
+          "Book Shelf",
+          "Office Shelf",
+          "Office - Sofa",
+          "MS Product"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Ranking",
+    "link": "/top-universities",
+    "children": [
+      {
+        "title": "World University Ranking",
+        "link": "/top-universities"
+      },
+      {
+        "title": "By Region",
+        "link": "/study-abroad",
+        "children": [
+          {
+            "title": "Africa",
+            "link": "/study-abroad/africa"
+          },
+          {
+            "title": "Asia",
+            "link": "/study-abroad/asia"
+          },
+          {
+            "title": "Europe",
+            "link": "/study-abroad/europe"
+          },
+          {
+            "title": "Latin America",
+            "link": "/study-abroad/latin-america"
+          },
+          {
+            "title": "North America",
+            "link": "/study-abroad/nort-america"
+          },
+          {
+            "title": "Oceania",
+            "link": "/study-abroad/oceania"
+          }
+        ]
+      },
+      {
+        "title": "World University Ranking by Subject",
+        "link": "/programs/search"
+      },
+      {
+        "title": "Best Student Cities in the World",
+        "link": "/best-student-cities"
+      }
+    ]
+  },
+
+  {
+    "title": "Destination",
+    "link": "/study-abroad",
+    "children": [
+      {
+        "title": "United Kingdom",
+        "link": "/study-abroad/europe/united-kingdom"
+      },
+      {
+        "title": "Germany",
+        "link": "/study-abroad/europe/germany"
+      },
+      {
+        "title": "Europe",
+        "link": "/study-abroad/europe"
+      },
+      {
+        "title": "France",
+        "link": "/study-abroad/europe/france"
+      },
+      {
+        "title": "Australia",
+        "link": "/study-abroad/oceania/australia"
+      },
+      {
+        "title": "New Zealand",
+        "link": "/study-abroad/oceania/new-zealand"
+      }
+    ]
+  },
+
+  {
+    "title": "Jobs",
+    "link": "/jobs"
+  },
+  {
+    "title": "Community",
+    "link": "/community"
+  },
+  {
+    "title": "Wings",
+    "link": "/blog"
+  }
+]

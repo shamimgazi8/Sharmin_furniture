@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Modern Sofa",
+    "slug": "modern-sofa-123",
+    "description": "A comfortable and stylish modern sofa with plush cushions.",
+    "price": 499,
+    "imageUrl": "https://s3.eu-1.blufs.ir/aradbranding-en-uploads/topics/16719708928089.jpg",
+    "dimensions": {
+      "width": "80 inches",
+      "depth": "35 inches",
+      "height": "34 inches"
+    },
+    "material": "Fabric and wood",
+    "color": "Gray"
+  },
+  {
+    "id": 2,
+    "name": "Vintage Armchair",
+    "slug": "vintage-armchair-123",
+    "description": "A classic vintage armchair with elegant wooden legs.",
+    "price": 299,
+    "imageUrl": "https://i.etsystatic.com/15437068/r/il/cb8ccd/2083763787/il_fullxfull.2083763787_ct89.jpg",
+    "dimensions": {
+      "width": "32 inches",
+      "depth": "30 inches",
+      "height": "38 inches"
+    },
+    "material": "Leather and wood",
+    "color": "Brown"
+  },
+  {
+    "id": 3,
+    "name": "Glass Coffee Table",
+    "slug": "glass-cofee-chair-123",
+    "description": "A sleek glass coffee table with a metal frame.",
+    "price": 199,
+    "imageUrl": "https://www.juliettesinteriors.co.uk/wp-content/uploads/2022/07/wooden-square-coffee-table-with-glass-top.jpg",
+    "dimensions": {
+      "width": "42 inches",
+      "depth": "24 inches",
+      "height": "18 inches"
+    },
+    "material": "Glass and metal",
+    "color": "Black"
+  },
+  {
+    "id": 4,
+    "name": "Wooden Dining Table",
+    "slug": "dinning-table-123",
+    "description": "A solid wooden dining table that seats up to six people.",
+    "price": 799,
+    "imageUrl": "https://hatil-image.s3.ap-southeast-1.amazonaws.com/Nop_Image/Hansford-193%20and%20Jellyroll-193%20.png",
+    "dimensions": {
+      "width": "72 inches",
+      "depth": "36 inches",
+      "height": "30 inches"
+    },
+    "material": "Solid wood",
+    "color": "Natural"
+  },
+  {
+    "id": 5,
+    "name": "Minimalist Bed Frame",
+    "slug": "bed-123",
+    "description": "A minimalist bed frame with a sturdy platform for your mattress.",
+    "price": 399,
+    "imageUrl": "https://i.pinimg.com/736x/a5/55/68/a55568b9165c70675936b76646fce3cb.jpg",
+    "dimensions": {
+      "width": "60 inches",
+      "depth": "80 inches",
+      "height": "14 inches"
+    },
+    "material": "Metal",
+    "color": "White"
+  }
+]
