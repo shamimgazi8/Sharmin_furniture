@@ -11,6 +11,8 @@ import { FiChevronDown, FiChevronUp, FiHeart } from 'react-icons/fi';
 import { MdOutlineSwapCalls } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import ThemeToggleButton from '../@common/darkmode';
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import SearchBar from '../@common/search';
 
 // const ProfileAvatar = dynamic(() => import('@/modules/@admin/avatar'), {
 //   ssr: false,
@@ -83,110 +85,118 @@ const Header = () => {
               </Link>
             </div>
             <nav className="hidden lg:block">
-              <ul className="flex items-center">
-                {navData?.map((item1, i) => {
+              <ul className="flex items-center backdrop-blur-md">
+                {navData?.map((NavItem, i) => {
                   return (
-                    <li key={i} className="group/item-1 relative">
+                    <li
+                      key={i}
+                      className="group/item-1 relative backdrop-blur-md"
+                    >
                       <Link
-                        href={item1?.link}
-                        className="flex items-center gap-1 p-6 hover:!text-gradient font-normal"
+                        href={NavItem?.link}
+                        className="flex items-center gap-1 p-6 hover:!text-gradient font-normal backdrop-blur-md"
                       >
-                        {item1?.title}
-                        {item1.children && (
+                        {NavItem?.title}
+                        {NavItem.children && (
                           <FiChevronDown className="mt-[2px]" />
                         )}
                       </Link>
 
-                      {item1?.children && (
-                        <ul className="min-w-[260px] absolute  bg-white py-2 pl-4 pr-0 rounded-md  shadow-lg opacity-0 invisible top-[100%] left-0 group-hover/item-1:visible group-hover/item-1:opacity-100">
-                          {item1?.children?.map((item2: any, i: any) => {
-                            return (
-                              <li
-                                className="overflow-hidden group/item-2 w-full"
-                                key={i}
-                              >
-                                <Link
-                                  href={item2?.link}
-                                  className="group/test grid grid-cols-[auto_1fr_auto]  p-2 hover:text-gradient text-black font-semibold items-center gap-2 translate-x-[-30px] hover:translate-x-0 transition"
+                      {NavItem?.children && (
+                        <ul className="min-w-[260px] absolute  bg-white/90 backdrop-blur-md py-2 pl-4 pr-0 rounded-md  shadow-lg opacity-0 invisible top-[100%] left-0 group-hover/item-1:visible group-hover/item-1:opacity-100">
+                          {NavItem?.children?.map(
+                            (NavItemChild: any, i: any) => {
+                              return (
+                                <li
+                                  className="overflow-hidden group/item-2 w-full"
+                                  key={i}
                                 >
-                                  <span className="block shrink-0 test w-[15px] h-[10px] bg-gradient-to-r from-primary to-secondary"></span>
-                                  <span className="group-hover/item-2:text-gradient">
-                                    {item2.title}
-                                  </span>
-                                  {item2?.children && (
-                                    <span className="flex w-[10px] h-[10px] bg-gradient-to-r from-primary to-secondary test-2"></span>
-                                  )}
-                                </Link>
-                                {item1?.children?.length - 1 !== i && (
-                                  <span className="block w-[calc(100%-16px)] h-[1px] bg-[#eee]"></span>
-                                )}
-
-                                {item2?.children && (
-                                  <ul className="min-w-[300px] absolute bg-white p-4 pr-0 rounded-md  shadow-lg opacity-0 invisible top-0  left-[100%] group-hover/item-2:visible group-hover/item-2:opacity-100">
-                                    {item2?.children?.map(
-                                      (item3: any, i: any) => {
-                                        return (
-                                          <li
-                                            key={i}
-                                            className="overflow-hidden group/item-3"
-                                          >
-                                            <Link
-                                              href={item3?.link}
-                                              className="flex p-2 hover:text-inherit text-black font-normal items-center gap-2 translate-x-[-30px] hover:translate-x-0 transition"
-                                            >
-                                              <span className="block shrink-0 test w-[15px] h-[10px] bg-gradient-to-r from-primary to-secondary"></span>
-                                              <span className="group-hover/item-3:text-gradient">
-                                                {item3.title}
-                                              </span>
-                                              {item3?.children && (
-                                                <span className="flex w-[10px] h-[10px] bg-gradient-to-r from-primary to-secondary test-2"></span>
-                                              )}
-                                            </Link>
-
-                                            {item2?.children?.length - 1 !==
-                                              i && (
-                                              <span className="block w-[calc(100%-16px)] h-[1px] bg-[#eee]"></span>
-                                            )}
-
-                                            {item3?.children && (
-                                              <ul className="min-w-[200px] absolute bg-white p-4 pr-0 rounded-md  shadow-lg opacity-0 invisible top-0  left-[100%] group-hover/item-3:visible group-hover/item-3:opacity-100">
-                                                {item3?.children?.map(
-                                                  (item4: any, i: any) => {
-                                                    return (
-                                                      <li
-                                                        key={i}
-                                                        className="overflow-hidden"
-                                                      >
-                                                        <Link
-                                                          href={item4?.link}
-                                                          className="flex p-2 hover:text-inherit text-black font-normal items-center gap-2 translate-x-[-30px] hover:translate-x-0 transition"
-                                                        >
-                                                          <span className="block test w-[15px] h-[10px] bg-gradient-to-r from-primary to-secondary"></span>
-                                                          <span className="group-hover/item-3:text-gradient">
-                                                            {item4.title}
-                                                          </span>
-                                                        </Link>
-                                                        {item3?.children
-                                                          ?.length -
-                                                          1 !==
-                                                          i && (
-                                                          <span className="block w-[calc(100%-16px)] h-[1px] bg-[#eee]"></span>
-                                                        )}
-                                                      </li>
-                                                    );
-                                                  }
-                                                )}
-                                              </ul>
-                                            )}
-                                          </li>
-                                        );
-                                      }
+                                  <Link
+                                    href={NavItemChild?.link}
+                                    className="group/test grid grid-cols-[auto_1fr_auto]  p-2 hover:text-gradient text-black font-semibold items-center gap-2 translate-x-[-30px] hover:translate-x-0 transition"
+                                  >
+                                    <span className="block shrink-0 test w-[15px] h-[10px] bg-gradient-to-r from-primary to-secondary"></span>
+                                    <span className="group-hover/item-2:text-gradient">
+                                      {NavItemChild.title}
+                                    </span>
+                                    {NavItemChild?.children && (
+                                      <span className="flex w-[10px] h-[10px] bg-gradient-to-r from-primary to-secondary test-2">
+                                        <FaLongArrowAltRight />
+                                      </span>
                                     )}
-                                  </ul>
-                                )}
-                              </li>
-                            );
-                          })}
+                                  </Link>
+                                  {NavItem?.children?.length - 1 !== i && (
+                                    <span className="block w-[calc(100%-16px)] h-[1px] bg-[#eee]"></span>
+                                  )}
+
+                                  {NavItemChild?.children && (
+                                    <ul className="min-w-[300px] min-h-[300px] absolute bg-white/90 backdrop-blur-md group p-4 pr-0 rounded-md  shadow-lg opacity-0 invisible top-0  left-[100%] group-hover/item-2:visible group-hover/item-2:opacity-100">
+                                      {NavItemChild?.children?.map(
+                                        (NavItemChildOfChild: any, i: any) => {
+                                          return (
+                                            <li
+                                              key={i}
+                                              className="overflow-hidden group/item-3 group-hover:text-black"
+                                            >
+                                              <Link
+                                                href={NavItemChildOfChild?.link}
+                                                className="flex p-2 hover:text-inherit text-black font-normal items-center gap-2 translate-x-[-30px] hover:translate-x-0 transition"
+                                              >
+                                                <span className="block shrink-0 test w-[15px] h-[10px] bg-gradient-to-r from-primary to-secondary"></span>
+                                                <span className="group-hover/item-3:text-gradient">
+                                                  {NavItemChildOfChild.title}
+                                                </span>
+                                                {NavItemChildOfChild?.children && (
+                                                  <span className="flex w-[10px] h-[10px] bg-gradient-to-r from-primary to-secondary test-2"></span>
+                                                )}
+                                              </Link>
+
+                                              {NavItemChild?.children?.length -
+                                                1 !==
+                                                i && (
+                                                <span className="block w-[calc(100%-16px)] h-[1px] bg-[#eee]"></span>
+                                              )}
+
+                                              {NavItemChildOfChild?.children && (
+                                                <ul className="min-w-[200px] absolute bg-white/90 backdrop-blur-md p-4 pr-0 rounded-md  shadow-lg opacity-0 invisible top-0  left-[100%] group-hover/item-3:visible group-hover/item-3:opacity-100">
+                                                  {NavItemChildOfChild?.children?.map(
+                                                    (item4: any, i: any) => {
+                                                      return (
+                                                        <li
+                                                          key={i}
+                                                          className="overflow-hidden"
+                                                        >
+                                                          <Link
+                                                            href={item4?.link}
+                                                            className="flex p-2 hover:text-inherit text-black font-normal items-center gap-2 translate-x-[-30px] hover:translate-x-0 transition"
+                                                          >
+                                                            <span className="block test w-[15px] h-[10px] bg-gradient-to-r from-primary to-secondary"></span>
+                                                            <span className="group-hover/item-3:text-gradient">
+                                                              {item4.title}
+                                                            </span>
+                                                          </Link>
+                                                          {NavItemChildOfChild
+                                                            ?.children?.length -
+                                                            1 !==
+                                                            i && (
+                                                            <span className="block w-[calc(100%-16px)] h-[1px] bg-[#eee]"></span>
+                                                          )}
+                                                        </li>
+                                                      );
+                                                    }
+                                                  )}
+                                                </ul>
+                                              )}
+                                            </li>
+                                          );
+                                        }
+                                      )}
+                                    </ul>
+                                  )}
+                                </li>
+                              );
+                            }
+                          )}
                         </ul>
                       )}
                     </li>
@@ -198,15 +208,16 @@ const Header = () => {
               {!hasCookie ? (
                 <Fragment>
                   <div className="flex items-center gap-3">
+                    <SearchBar />
                     <Link
                       href="/login"
-                      className="btn btn-primary  hover:text-white text-gradient"
+                      className="btn btn-primary   text-gradient"
                     >
                       <span className="">Login</span>
                     </Link>
                     <Link
                       href="/signup"
-                      className=" btn-primary  hover:text-white text-gradient "
+                      className=" btn-primary   text-gradient "
                     >
                       <span className="">Singup</span>
                     </Link>

@@ -1,59 +1,105 @@
 import React from 'react';
-
-const Footer = () => {
+import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import logo from './../../public/misc/logo.png';
+function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8 ">
-      <div className="container mx-auto flex flex-wrap justify-between">
-        {/* About Section */}
-        <div className="w-full sm:w-1/3 mb-6 sm:mb-0">
-          <h3 className="text-xl font-bold mb-4">About Us</h3>
-          <p>
-            Welcome to Sharmin Furniture Shop, your destination for
-            high-quality, stylish furniture pieces that transform your living
-            spaces into a home.
-          </p>
+    <footer className=" bg-blue-900 text-white py-[50px]">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
+            <img
+              src={'/misc/sharmin.png'}
+              alt="Nadia Furniture Limited"
+              className="w-[300px] h-24 mb-4"
+            />
+            <div className=" h-[200px] w-[200px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20658.190789038403!2d90.42873186002464!3d23.751419431382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1723214193265!5m2!1sen!2sbd"
+                width="300"
+                height="200"
+                // allowfullscreen="false"
+                loading="lazy"
+                // referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row space-x-8">
+            <div className="flex flex-col space-y-2">
+              <h3 className="text-lg font-bold">Information</h3>
+              <ul>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Warranty And Services</a>
+                </li>
+                <li>
+                  <a href="#">Support 24/7</a>
+                </li>
+                <li>
+                  <a href="#">Product Support</a>
+                </li>
+                <li>
+                  <a href="#">Trade License</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col space-y-2">
+              <h3 className="text-lg font-bold">Services</h3>
+              <ul>
+                <li>
+                  <a href="#">Returns</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <a href="#">Site Map</a>
+                </li>
+                <li>
+                  <a href="#">Leave a Complain</a>
+                </li>
+                <li>
+                  <a href="#">Appointment Booking</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col space-y-2">
+              <h3 className="text-lg font-bold">Explore</h3>
+              <ul>
+                <li>
+                  <a href="#">IPDC EZ</a>
+                </li>
+                <li>
+                  <a href="#">EMI</a>
+                </li>
+                <li>
+                  <a href="#">Catalog</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col space-y-2">
+              <h3 className="text-lg font-bold">Address</h3>
+              <p>Nadia Furniture Ltd.</p>
+              <p>62. East Hazipara, DIT Road, Malibagh, Dhaka-1219</p>
+              <p>
+                <FaMapMarkerAlt className="inline-block mr-2" />
+                View larger map
+              </p>
+              <p>
+                <FaPhone className="inline-block mr-2" />
+                +8809617444777
+              </p>
+              <p>
+                <FaEnvelope className="inline-block mr-2" />
+                your_email@example.com
+              </p>
+            </div>
+          </div>
         </div>
-
-        {/* Navigation Links */}
-        <div className="w-full sm:w-1/3 mb-6 sm:mb-0">
-          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-          <ul>
-            <li>
-              <a href="#" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Shop
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Contact Info */}
-        <div className="w-full sm:w-1/3">
-          <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-          <p>Phone: (123) 456-7890</p>
-          <p>Email: contact@sharminfurnitureshop.com</p>
-          <p>Address: 123 Furniture Lane, City, State, ZIP</p>
-        </div>
-      </div>
-      <div className="container mx-auto mt-8 text-center text-gray-500">
-        <p>&copy; 2024 Sharmin Furniture Shop. All rights reserved.</p>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

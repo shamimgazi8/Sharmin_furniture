@@ -6,180 +6,261 @@
       {
         "title": "Bedroom",
         "link": "/bedroom",
-        "chiildren": [
-          "Bed",
-          "Bed Slide Table",
-          "Almirah",
-          "Dressing Table",
-          "Dressing Sitter",
-          "Chest of Drawer",
-          "Alna",
-          "Mattress"
+        "children": [
+          {
+            "title": "Bed",
+            "link": "/furniture/bed"
+          },
+          {
+            "title": "Bed Slide Table",
+            "link": "/furniture/bed-slide-table"
+          },
+          {
+            "title": "Almirah",
+            "link": "/furniture/almirah"
+          },
+          {
+            "title": "Dressing Table",
+            "link": "/furniture/dressing-table"
+          },
+          {
+            "title": "Dressing Sitter",
+            "link": "/furniture/dressing-sitter"
+          },
+          {
+            "title": "Chest of Drawer",
+            "link": "/furniture/chest-of-drawer"
+          },
+          {
+            "title": "Alna",
+            "link": "/furniture/alna"
+          },
+          {
+            "title": "Mattress",
+            "link": "/furniture/mattress"
+          }
         ]
       },
       {
         "title": " Dining Room",
         "link": "/Dining Room",
-        "chiildren": [
-          "Dining Set",
-          "Dining Chair",
-          "Showcase",
-          "Side Board",
-          "Oven Box"
+        "children": [
+          {
+            "title": "Dining Set",
+            "link": "/furniture/dining-set"
+          },
+          {
+            "title": "Dining Chair",
+            "link": "/furniture/dining-chair"
+          },
+          {
+            "title": "Showcase",
+            "link": "/furniture/showcase"
+          },
+          {
+            "title": "Side Board",
+            "link": "/furniture/side-board"
+          },
+          {
+            "title": "Oven Box",
+            "link": "/furniture/oven-box"
+          }
         ]
       },
       {
         "title": "Lifestyle",
         "link": "/lifestyle",
-        "chiildren": [
-          "Quraan Rehal",
-          "Accent Table",
-          "Iron Stand",
-          "Coffee Chair",
-          "Coffee Table",
-          "Rocking Chair",
-          "Tea Trolley",
-          "Magazine Rack",
-          "Mirror Frame",
-          "Tissue Box",
-          "Side Table",
-          "Shoe Rack",
-          "Showpiece Rack",
-          "Storage"
+        "children": [
+          {
+            "title": "Quraan Rehal",
+            "link": "/furniture/quraan-rehal"
+          },
+          {
+            "title": "Accent Table",
+            "link": "/furniture/accent-table"
+          },
+          {
+            "title": "Iron Stand",
+            "link": "/furniture/iron-stand"
+          },
+          {
+            "title": "Coffee Chair",
+            "link": "/furniture/coffee-chair"
+          },
+          {
+            "title": "Coffee Table",
+            "link": "/furniture/coffee-table"
+          },
+          {
+            "title": "Rocking Chair",
+            "link": "/furniture/rocking-chair"
+          },
+          {
+            "title": "Tea Trolley",
+            "link": "/furniture/tea-trolley"
+          },
+          {
+            "title": "Magazine Rack",
+            "link": "/furniture/magazine-rack"
+          },
+          {
+            "title": "Mirror Frame",
+            "link": "/furniture/mirror-frame"
+          },
+          {
+            "title": "Tissue Box",
+            "link": "/furniture/tissue-box"
+          },
+          {
+            "title": "Side Table",
+            "link": "/furniture/side-table"
+          },
+          {
+            "title": "Shoe Rack",
+            "link": "/furniture/shoe-rack"
+          },
+          {
+            "title": "Showpiece Rack",
+            "link": "/furniture/showpiece-rack"
+          },
+          {
+            "title": "Storage",
+            "link": "/furniture/storage"
+          }
         ]
       },
 
       {
         "title": "Living Room",
         "link": "/living-room",
-        "chiildren": [
-          "Sofa",
-          "Corner Sofa/L Shaped Sofa",
-          "Fabric Sofa",
-          "Center Table",
-          "Divan",
-          "TV Trolley"
+        "children": [
+          {
+            "title": "Sofa",
+            "link": "/furniture/sofa"
+          },
+          {
+            "title": "Corner Sofa/L Shaped Sofa",
+            "link": "/furniture/corner-sofa"
+          },
+          {
+            "title": "Fabric Sofa",
+            "link": "/furniture/fabric-sofa"
+          },
+          {
+            "title": "Center Table",
+            "link": "/furniture/center-table"
+          },
+          {
+            "title": "Divan",
+            "link": "/furniture/divan"
+          },
+          {
+            "title": "TV Trolley",
+            "link": "/furniture/tv-trolley"
+          }
         ]
       },
 
       {
         "title": "Reading Room",
         "link": "/reading-room",
-        "chiildren": ["Computer Table", "Book Shelf", "Reading Table"]
+        "children": [
+          {
+            "title": "Computer Table",
+            "link": "/furniture/computer-table"
+          },
+          {
+            "title": "Book Shelf",
+            "link": "/furniture/book-shelf"
+          },
+          {
+            "title": "Reading Table",
+            "link": "/furniture/reading-table"
+          }
+        ]
       },
 
       {
         "title": "Office Furniture",
         "link": "/office-furniture",
-        "chiildren": [
-          "Office Chair",
-          "Conference Chair",
-          "Swivel Chair",
-          "Visitor Chair",
-          "Classroom Chair",
-          "Office Table",
-          "Computer Table",
-          "Conference Table",
-          "Drawer Unit",
-          "Office Cabinet",
-          "Book Shelf",
-          "Office Shelf",
-          "Office - Sofa",
-          "MS Product"
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Ranking",
-    "link": "/top-universities",
-    "children": [
-      {
-        "title": "World University Ranking",
-        "link": "/top-universities"
-      },
-      {
-        "title": "By Region",
-        "link": "/study-abroad",
         "children": [
           {
-            "title": "Africa",
-            "link": "/study-abroad/africa"
+            "title": "Office Chair",
+            "link": "/furniture/office-chair"
           },
           {
-            "title": "Asia",
-            "link": "/study-abroad/asia"
+            "title": "Conference Chair",
+            "link": "/furniture/conference-chair"
           },
           {
-            "title": "Europe",
-            "link": "/study-abroad/europe"
+            "title": "Swivel Chair",
+            "link": "/furniture/swivel-chair"
           },
           {
-            "title": "Latin America",
-            "link": "/study-abroad/latin-america"
+            "title": "Visitor Chair",
+            "link": "/furniture/visitor-chair"
           },
           {
-            "title": "North America",
-            "link": "/study-abroad/nort-america"
+            "title": "Classroom Chair",
+            "link": "/furniture/classroom-chair"
           },
           {
-            "title": "Oceania",
-            "link": "/study-abroad/oceania"
+            "title": "Office Table",
+            "link": "/furniture/office-table"
+          },
+          {
+            "title": "Computer Table",
+            "link": "/furniture/computer-table"
+          },
+          {
+            "title": "Conference Table",
+            "link": "/furniture/conference-table"
+          },
+          {
+            "title": "Drawer Unit",
+            "link": "/furniture/drawer-unit"
+          },
+          {
+            "title": "Office Cabinet",
+            "link": "/furniture/office-cabinet"
+          },
+          {
+            "title": "Book Shelf",
+            "link": "/furniture/book-shelf"
+          },
+          {
+            "title": "Office Shelf",
+            "link": "/furniture/office-shelf"
+          },
+          {
+            "title": "Office - Sofa",
+            "link": "/furniture/office-sofa"
+          },
+          {
+            "title": "MS Product",
+            "link": "/furniture/ms-product"
           }
         ]
-      },
-      {
-        "title": "World University Ranking by Subject",
-        "link": "/programs/search"
-      },
-      {
-        "title": "Best Student Cities in the World",
-        "link": "/best-student-cities"
       }
     ]
   },
-
   {
-    "title": "Destination",
-    "link": "/study-abroad",
+    "title": "Our Showroom",
+    "link": "/showroom",
     "children": [
       {
-        "title": "United Kingdom",
-        "link": "/study-abroad/europe/united-kingdom"
+        "title": "Banasree",
+        "link": "/showroom/banasree"
       },
       {
-        "title": "Germany",
-        "link": "/study-abroad/europe/germany"
-      },
-      {
-        "title": "Europe",
-        "link": "/study-abroad/europe"
-      },
-      {
-        "title": "France",
-        "link": "/study-abroad/europe/france"
-      },
-      {
-        "title": "Australia",
-        "link": "/study-abroad/oceania/australia"
-      },
-      {
-        "title": "New Zealand",
-        "link": "/study-abroad/oceania/new-zealand"
+        "title": "Badda",
+        "link": "/showroom/badda"
       }
     ]
   },
 
   {
-    "title": "Jobs",
-    "link": "/jobs"
-  },
-  {
-    "title": "Community",
-    "link": "/community"
-  },
-  {
-    "title": "Wings",
-    "link": "/blog"
+    "title": "Populer Products",
+    "link": "/populer-products"
   }
 ]
