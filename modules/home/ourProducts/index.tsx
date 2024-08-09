@@ -8,7 +8,7 @@ const products = [
     description: 'A comfortable and stylish modern sofa.',
     price: '$499',
     imageUrl:
-      'https://media.architecturaldigest.com/photos/64db9eb3be7a08b03e6cd3a0/16:9/w_7040,h_3960,c_limit/TBHC_50_Bridge_Park_Dr_0900.jpeg',
+      'https://hatil-image.s3.ap-southeast-1.amazonaws.com/Nop_Image/Bedroom%20set%201%20LQ.png',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const products = [
     description: 'A sturdy dining table made of oak.',
     price: '$799',
     imageUrl:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCfd1AsVGs7JLJ2V4Gv0FqswWbFoj14ixmA&s',
+      'https://hatil-image.s3.ap-southeast-1.amazonaws.com/master_image/Idyll-152.png',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const products = [
     description: 'An ergonomic office chair for all-day comfort.',
     price: '$199',
     imageUrl:
-      'https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2023/7/19/3/DOTY2023_Dramatic-Before-And-Afters_Hidden-Hills-11.jpg.rend.hgtvcom.1280.1280.suffix/1689786863909.jpeg',
+      'https://cdn.media.amplience.net/i/shadesoflight/furniture_1?fmt=auto&w=575',
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const products = [
     description: 'A spacious bookshelf to organize your books.',
     price: '$299',
     imageUrl:
-      'https://cdn.autonomous.ai/production/ecm/230907/10-Home-Reading-Room-Ideas-to-Curl-up-With-a-Book-in-20231.webp',
+      'https://birchwood.com/wp-content/uploads/2023/09/BirchwoodFurniture-aug2023-missingheroes-hp-1.jpg',
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const products = [
     description: 'A spacious bookshelf to organize your books.',
     price: '$299',
     imageUrl:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCqg3NUgSBIXNezOvOJpk5_uhCC-kimVXPLA&s',
+      'https://ahdfurniture.com/wp-content/uploads/2024/04/sectional-sofa-1.webp',
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const products = [
     description: 'A spacious bookshelf to organize your books.',
     price: '$299',
     imageUrl:
-      'https://media.istockphoto.com/id/1358435984/photo/modern-home-office.jpg?s=612x612&w=0&k=20&c=AblSg--FN3MSPQaJfdF13uKNMsqV8A5ytgxjCvlpzEQ=',
+      'https://d2kz53n3bzvihv.cloudfront.net/resized/790_395_0_255_255_255/media/gbu0/categoryxxl/image/DesktopHeader-P393_LLA005_LLA008_LLA010_A.jpg.jpeg',
   },
 ];
 

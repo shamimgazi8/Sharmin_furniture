@@ -2,39 +2,33 @@
 import React, { useState, useEffect } from 'react';
 import { BiSolidSun } from 'react-icons/bi';
 import { FaMoon } from 'react-icons/fa';
-const themeDark = {
-  name: 'dark',
-};
-const themeLight = {
-  name: 'light',
-};
+
+const themeDark = 'dark';
+const themeLight = 'light';
+
 const ThemeToggleButton = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
-  // Initialize theme based on stored preference or system preference
   useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--background-color', isDarkMode ? '#000' : '#fff');
+    root.style.setProperty('--text-color', isDarkMode ? '#fff' : '#000');
+    // Get the saved theme from local storage
     const savedTheme = localStorage.getItem('theme');
-    if (
-      savedTheme === 'dark' ||
-      (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-      setIsDarkMode(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      setIsDarkMode(false);
-    }
-  }, []);
+    console.log('Saved theme:', savedTheme);
+  }, [isDarkMode]);
 
-  // Toggle theme and update local storage
   const toggleTheme = () => {
+    // Toggle the theme
     if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', JSON.stringify(themeLight));
+      document.documentElement.classList.remove(themeDark);
+      localStorage.setItem('theme', themeLight);
+      console.log('Set theme to light');
       setIsDarkMode(false);
     } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', JSON.stringify(themeDark));
+      document.documentElement.classList.add(themeDark);
+      localStorage.setItem('theme', themeDark);
+      console.log('Set theme to dark');
       setIsDarkMode(true);
     }
   };

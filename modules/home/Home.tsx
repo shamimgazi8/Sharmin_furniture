@@ -1,45 +1,71 @@
-import Cerasoul from '../@common/carasoul';
-
+import Image from 'next/image';
 import Marquee from '../@common/marquee';
+import Hero from './Hero';
 import HeroGallery from './heroGallery';
+import MultiSlider from './multiCerasoul';
 import OurProducts from './ourProducts';
 import PopulerFurniture from './populerFuniture';
 import CreationPurpose from './purpose';
 import Uniqueness from './uniqueness/Uniqueness';
-
+const items = [
+  {
+    src: 'https://www.bdfurnituresolution.com/images/stories/virtuemart/product/sunshine-bed-furniture-bdfs-dhaka.jpg',
+    alt: 'Slide 1',
+    caption: 'This is the first slide',
+  },
+  {
+    src: 'https://admin.regalfurniturebd.com/storage/uploads/fullsize/2023-06/cbh-145--.jpg',
+    alt: 'Slide 2',
+    caption: 'This is the second slide',
+  },
+  {
+    src: 'https://www.bdfurnituresolution.com/images/stories/virtuemart/product/std-bed-furniture-dhaka.jpg',
+    alt: 'Slide 3',
+    caption: 'This is the third slide',
+  },
+];
 const HomePage = () => {
   return (
-    <div className=" flex flex-col  gap-0 translate-y-[-70px]">
-      <div className=" z-50 ">
-        <div className=" absolute w-[500px]  backdrop-blur-xl z-50 top-[200px] right-[100px] rounded-md p-5 ">
-          <div className=" w-[110px]">
-            <h3 className="text-white p-2">New Arrival</h3>
-          </div>
-          <h1 className=" text-[50px] font-semibold text-black">
-            <span className=" gradient-text">Discover</span> Our New Collection
-          </h1>
-          <p className=" mb-3">
-            In the competitive world of furniture businesses, having a catchy
-            and memorable slogan can make all the difference. A great slogan not
-            only helps you stand out from the crowd but also communicates your
-            brand&apos;s unique value proposition to potential customers
-          </p>
-          <div className=" w-[200px]">
-            <button className=" btn-secondary">Buy Now</button>
-          </div>
-        </div>
-        <Cerasoul />
-      </div>
+    <div className=" flex flex-col  gap-0 ">
+      <Hero />
       <CreationPurpose />
-      <div className="">
-        <Marquee text="SHARMIN FURNITURE" />
-      </div>
-      <div className="">
-        <HeroGallery />
-      </div>
+      <Marquee text="SHARMIN FURNITURE" />
+      <HeroGallery />
       <OurProducts />
       <PopulerFurniture />
       <Uniqueness />
+      <div className=" grid grid-cols-2 mt-5">
+        <MultiSlider height="400" width="700" />
+        <div className=" flex flex-col justify-center items-start text-start gap-4 ml-[20px]">
+          <h1 className=" text-[50px]">
+            Latest Sharmin&apos;s
+            <span className=" gradient-text"> shorts</span>
+          </h1>
+          <p className=" text-[25px] font-normal">
+            Take a glance and grab ideas from the artistic frames of SHARMIN.
+          </p>
+          <button>
+            Explore to view more{' '}
+            <span className=" border-b-[2px] pb-1 ">Ideas</span>
+          </button>
+        </div>
+      </div>
+      <div className="  grid grid-cols-2 mt-5">
+        <Image
+          height={800}
+          width={300}
+          src={`https://img.freepik.com/premium-psd/modern-furniture-social-media-promotion-banner-instagram-poster-template_545154-71.jpg`}
+          alt={'sharmin furn'}
+          className="h-full w-full object-cover"
+        />
+        <Image
+          height={800}
+          width={300}
+          src={`https://i.pinimg.com/736x/9b/06/c7/9b06c7158a63c7af6df2dd27b99e8e05.jpg`}
+          alt={'sharmin furn'}
+          className="h-full w-full object-cover"
+        />
+      </div>
     </div>
   );
 };

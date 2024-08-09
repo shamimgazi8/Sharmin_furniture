@@ -6,10 +6,10 @@ import Image from 'next/image';
 const Cerasoul = (imgObject: any) => {
   return (
     <div className="">
-      <Carousel arrows infinite={true} autoplay>
+      <Carousel arrows infinite={true} autoplay={true}>
         <div className=" lg:h-[100vh]">
           <Image
-            src="/furniture/f5.jpg"
+            src="/furniture/up1.jpg"
             height={1000}
             width={2000}
             alt="hero-one"
@@ -18,7 +18,7 @@ const Cerasoul = (imgObject: any) => {
         </div>
         <div className=" lg:h-[100vh]">
           <Image
-            src="/furniture/f2.jpg"
+            src="/furniture/up4.jpg"
             height={1000}
             width={2000}
             alt="hero-one"
@@ -27,7 +27,16 @@ const Cerasoul = (imgObject: any) => {
         </div>{' '}
         <div className="lg:h-[100vh]">
           <Image
-            src="/furniture/f1.jpg"
+            src="/furniture/up3.jpg"
+            height={1000}
+            width={2000}
+            alt="hero-one"
+            className=" object-cover rounded-lg"
+          />
+        </div>
+        <div className="lg:h-[100vh]">
+          <Image
+            src="/furniture/up6.jpg"
             height={1000}
             width={2000}
             alt="hero-one"
