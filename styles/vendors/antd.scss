@@ -1,0 +1,20 @@
+:where(.css-dev-only-do-not-override-d2lrxs).ant-tabs .ant-tabs-tab-btn {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+:where(.css-dev-only-do-not-override-d2lrxs).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  background-image: linear-gradient(to right, #8b5cf6, #10b981);
+  color: white;
+  padding: 5px 15px;
+}
+:where(.css-dev-only-do-not-override-d2lrxs).ant-pagination
+  .ant-pagination-item-active
+  a {
+  color: black;
+
+  .ant-pagination-next {
+    color: red;
+  }
+}

@@ -36,7 +36,7 @@ const HomePage = () => {
       <PopulerFurniture />
       <Uniqueness />
       <div className=" grid grid-cols-2 mt-5">
-        <MultiSlider height="400" width="700" />
+        <MultiSlider height="400" width="700" itemsToShow={4} />
         <div className=" flex flex-col justify-center items-start text-start gap-4 ml-[20px]">
           <h1 className=" text-[50px]">
             Latest Sharmin&apos;s

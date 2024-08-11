@@ -12,11 +12,19 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: "Grey Qo", cursive;
+  font-family: 'Grey Qo', cursive;
+}
+
+.container {
+  @apply max-w-[1298px] px-5 mx-auto w-full;
 }
 
 .custom-gradient {
-  background: linear-gradient(180deg, rgba(241, 242, 243, 0.3882352941) 40.52%, rgba(255, 255, 255, 0) 105.61%);
+  background: linear-gradient(
+    180deg,
+    rgba(241, 242, 243, 0.3882352941) 40.52%,
+    rgba(255, 255, 255, 0) 105.61%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -44,7 +52,7 @@ body {
 
 .slider {
   margin: 0 20px;
-  overflow: "hidden";
+  overflow: 'hidden';
   padding: 2rem 0;
 }
 
@@ -64,4 +72,4 @@ body {
 
 .react-multi-carousel-dot.react-multi-carousel-dot--active button {
   background: rgb(255, 68, 68) !important;
-}/*# sourceMappingURL=tailwind.css.map */
+} /*# sourceMappingURL=tailwind.css.map */

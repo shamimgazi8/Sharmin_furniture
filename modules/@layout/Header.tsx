@@ -13,6 +13,8 @@ import { useSelector } from 'react-redux';
 import ThemeToggleButton from '../@common/darkmode';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import SearchBar from '../@common/search';
+import Loginmodal from '../authentication/login/LoginModal';
+import SignUpModal from '../authentication/signup/SignUpmodal';
 
 // const ProfileAvatar = dynamic(() => import('@/modules/@admin/avatar'), {
 //   ssr: false,
@@ -209,18 +211,14 @@ const Header = () => {
                 <Fragment>
                   <div className="flex items-center gap-3">
                     <SearchBar />
-                    <Link
+                    {/* <Link
                       href="/login"
                       className="btn btn-primary   text-gradient"
                     >
                       <span className="">Login</span>
-                    </Link>
-                    <Link
-                      href="/signup"
-                      className=" btn-primary   text-gradient "
-                    >
-                      <span className="">Singup</span>
-                    </Link>
+                    </Link> */}
+                    <Loginmodal />
+                    <SignUpModal />
                   </div>
                 </Fragment>
               ) : (

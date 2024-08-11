@@ -23,12 +23,12 @@ const ThemeToggleButton = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove(themeDark);
       localStorage.setItem('theme', themeLight);
-      console.log('Set theme to light');
+
       setIsDarkMode(false);
     } else {
       document.documentElement.classList.add(themeDark);
       localStorage.setItem('theme', themeDark);
-      console.log('Set theme to dark');
+
       setIsDarkMode(true);
     }
   };

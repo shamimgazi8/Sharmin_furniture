@@ -12,7 +12,7 @@ interface BlogCardProps {
     imageWrapper?: string;
     imageStyle?: string;
     iconWrapper?: string;
-    title?: string;
+    name?: string;
     icon?: string;
     data?: string;
     galleryWrapper?: string;
@@ -75,7 +75,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
           <div className={` ${classes?.body ? classes.body : ''}`}>
             <h3
               className={`line-clamp-2 group-hover:text-primary transition-all mb-[10px] ${
-                classes?.title ? classes.title : ''
+                classes?.name ? classes.name : ''
               }`}
             >
               {data?.highlight && (
@@ -90,7 +90,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
                   <GoDotFill className="text-primary text-sm" />
                 </span>
               )}
-              {data?.title}
+              {data?.name}
             </h3>
             {data?.excerpt && (
               <p
@@ -163,7 +163,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
           <div className={` ${classes?.body ? classes.body : ''}`}>
             <h3
               className={`line-clamp-2 group-hover:text-primary transition-all mb-[10px] ${
-                classes?.title ? classes.title : ''
+                classes?.name ? classes.name : ''
               }`}
             >
               {data?.highlight && (
@@ -178,7 +178,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
                   <GoDotFill className="text-primary text-sm" />
                 </span>
               )}
-              {data?.title}
+              {data?.name}
             </h3>
             {data?.excerpt && (
               <p
@@ -208,7 +208,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
         </Link>
       ) : (
         <Link
-          href={`/${data?.primCategory?.slug}/${data?.slug}`}
+          href={`/${'product'}/${data?.slug}`}
           className={`grid group hover:text-inherit relative  ${
             classes?.root ? classes.root : ''
           }`}
@@ -249,7 +249,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
           <div className={` ${classes?.body ? classes.body : ''}`}>
             <h3
               className={`line-clamp-2 group-hover:text-primary transition-all mb-[10px] ${
-                classes?.title ? classes.title : ''
+                classes?.name ? classes.name : ''
               }`}
             >
               {data?.highlight && (
@@ -264,7 +264,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
                   <GoDotFill className="text-primary text-sm" />
                 </span>
               )}
-              {data?.title}
+              {data?.name}
             </h3>
             {data?.excerpt && (
               <p

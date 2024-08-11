@@ -12,3 +12,10 @@ export const excerpt = (_html: any, count = 100) => {
     .replaceAll(/"/g, '');
   return text?.slice(0, count) + (text?.length > count ? '...' : '');
 };
+
+export function capitalizeFirstLetter(string: any) {
+  const letterCorrection = string.charAt(0).toUpperCase() + string.slice(1);
+  const space = letterCorrection.replace('-', ' ');
+
+  return space;
+}
