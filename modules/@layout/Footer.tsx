@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fa';
 import logo from './../../public/misc/logo.png';
 import { LuInstagram } from 'react-icons/lu';
+import Image from 'next/image';
 function Footer() {
   const partners = [
     {
@@ -207,10 +208,12 @@ function Footer() {
                       className="m-4 hover:opacity-80 transition-opacity duration-300"
                       aria-label={`Visit ${partner.name}`}
                     >
-                      <img
+                      <Image
+                        height={100}
+                        width={60}
                         src={partner.logo}
                         alt={`${partner.name} Logo`}
-                        className="h-16"
+                        className="h-10"
                       />
                     </a>
                   ))}

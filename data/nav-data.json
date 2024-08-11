@@ -9,61 +9,61 @@
         "children": [
           {
             "title": "Bed",
-            "link": "/furniture/bed"
+            "link": "/bedroom/bed"
           },
           {
             "title": "Bed Slide Table",
-            "link": "/furniture/bed-slide-table"
+            "link": "/bedroom/bed-slide-table"
           },
           {
             "title": "Almirah",
-            "link": "/furniture/almirah"
+            "link": "/bedroom/almirah"
           },
           {
             "title": "Dressing Table",
-            "link": "/furniture/dressing-table"
+            "link": "/bedroom/dressing-table"
           },
           {
             "title": "Dressing Sitter",
-            "link": "/furniture/dressing-sitter"
+            "link": "/bedroom/dressing-sitter"
           },
           {
             "title": "Chest of Drawer",
-            "link": "/furniture/chest-of-drawer"
+            "link": "/bedroom/chest-of-drawer"
           },
           {
             "title": "Alna",
-            "link": "/furniture/alna"
+            "link": "/bedroom/alna"
           },
           {
             "title": "Mattress",
-            "link": "/furniture/mattress"
+            "link": "/bedroom/mattress"
           }
         ]
       },
       {
         "title": " Dining Room",
-        "link": "/Dining Room",
+        "link": "/dining-room",
         "children": [
           {
             "title": "Dining Set",
-            "link": "/furniture/dining-set"
+            "link": "/dinning-room/dining-set"
           },
           {
             "title": "Dining Chair",
-            "link": "/furniture/dining-chair"
+            "link": "/dinning-room/dining-chair"
           },
           {
             "title": "Showcase",
-            "link": "/furniture/showcase"
+            "link": "/dinning-room/showcase"
           },
           {
             "title": "Side Board",
-            "link": "/furniture/side-board"
+            "link": "/dinning-room/side-board"
           },
           {
             "title": "Oven Box",
-            "link": "/furniture/oven-box"
+            "link": "/dinning-room/oven-box"
           }
         ]
       },
@@ -73,59 +73,59 @@
         "children": [
           {
             "title": "Quraan Rehal",
-            "link": "/furniture/quraan-rehal"
+            "link": "/lifestyle/quraan-rehal"
           },
           {
             "title": "Accent Table",
-            "link": "/furniture/accent-table"
+            "link": "/lifestyle/accent-table"
           },
           {
             "title": "Iron Stand",
-            "link": "/furniture/iron-stand"
+            "link": "/lifestyle/iron-stand"
           },
           {
             "title": "Coffee Chair",
-            "link": "/furniture/coffee-chair"
+            "link": "/lifestyle/coffee-chair"
           },
           {
             "title": "Coffee Table",
-            "link": "/furniture/coffee-table"
+            "link": "/lifestyle/coffee-table"
           },
           {
             "title": "Rocking Chair",
-            "link": "/furniture/rocking-chair"
+            "link": "/lifestyle/rocking-chair"
           },
           {
             "title": "Tea Trolley",
-            "link": "/furniture/tea-trolley"
+            "link": "/lifestyle/tea-trolley"
           },
           {
             "title": "Magazine Rack",
-            "link": "/furniture/magazine-rack"
+            "link": "/lifestyle/magazine-rack"
           },
           {
             "title": "Mirror Frame",
-            "link": "/furniture/mirror-frame"
+            "link": "/lifestyle/mirror-frame"
           },
           {
             "title": "Tissue Box",
-            "link": "/furniture/tissue-box"
+            "link": "/lifestyle/tissue-box"
           },
           {
             "title": "Side Table",
-            "link": "/furniture/side-table"
+            "link": "/lifestyle/side-table"
           },
           {
             "title": "Shoe Rack",
-            "link": "/furniture/shoe-rack"
+            "link": "/lifestyle/shoe-rack"
           },
           {
             "title": "Showpiece Rack",
-            "link": "/furniture/showpiece-rack"
+            "link": "/lifestyle/showpiece-rack"
           },
           {
             "title": "Storage",
-            "link": "/furniture/storage"
+            "link": "/lifestyle/storage"
           }
         ]
       },
@@ -136,27 +136,27 @@
         "children": [
           {
             "title": "Sofa",
-            "link": "/furniture/sofa"
+            "link": "/living-room/sofa"
           },
           {
             "title": "Corner Sofa/L Shaped Sofa",
-            "link": "/furniture/corner-sofa"
+            "link": "/living-room/corner-sofa"
           },
           {
             "title": "Fabric Sofa",
-            "link": "/furniture/fabric-sofa"
+            "link": "/living-room/fabric-sofa"
           },
           {
             "title": "Center Table",
-            "link": "/furniture/center-table"
+            "link": "/living-room/center-table"
           },
           {
             "title": "Divan",
-            "link": "/furniture/divan"
+            "link": "/living-room/divan"
           },
           {
             "title": "TV Trolley",
-            "link": "/furniture/tv-trolley"
+            "link": "/living-room/tv-trolley"
           }
         ]
       },
@@ -167,15 +167,15 @@
         "children": [
           {
             "title": "Computer Table",
-            "link": "/furniture/computer-table"
+            "link": "/reading-room/computer-table"
           },
           {
             "title": "Book Shelf",
-            "link": "/furniture/book-shelf"
+            "link": "/reading-room/book-shelf"
           },
           {
             "title": "Reading Table",
-            "link": "/furniture/reading-table"
+            "link": "/reading-room/reading-table"
           }
         ]
       },
@@ -186,59 +186,59 @@
         "children": [
           {
             "title": "Office Chair",
-            "link": "/furniture/office-chair"
+            "link": "/office-furniture/office-chair"
           },
           {
             "title": "Conference Chair",
-            "link": "/furniture/conference-chair"
+            "link": "/office-furniture/conference-chair"
           },
           {
             "title": "Swivel Chair",
-            "link": "/furniture/swivel-chair"
+            "link": "/office-furniture/swivel-chair"
           },
           {
             "title": "Visitor Chair",
-            "link": "/furniture/visitor-chair"
+            "link": "/office-furniture/visitor-chair"
           },
           {
             "title": "Classroom Chair",
-            "link": "/furniture/classroom-chair"
+            "link": "/office-furniture/classroom-chair"
           },
           {
             "title": "Office Table",
-            "link": "/furniture/office-table"
+            "link": "/office-furniture/office-table"
           },
           {
             "title": "Computer Table",
-            "link": "/furniture/computer-table"
+            "link": "/office-furniture/computer-table"
           },
           {
             "title": "Conference Table",
-            "link": "/furniture/conference-table"
+            "link": "/office-furniture/conference-table"
           },
           {
             "title": "Drawer Unit",
-            "link": "/furniture/drawer-unit"
+            "link": "/office-furniture/drawer-unit"
           },
           {
             "title": "Office Cabinet",
-            "link": "/furniture/office-cabinet"
+            "link": "/office-furniture/office-cabinet"
           },
           {
             "title": "Book Shelf",
-            "link": "/furniture/book-shelf"
+            "link": "/office-furniture/book-shelf"
           },
           {
             "title": "Office Shelf",
-            "link": "/furniture/office-shelf"
+            "link": "/office-furniture/office-shelf"
           },
           {
             "title": "Office - Sofa",
-            "link": "/furniture/office-sofa"
+            "link": "/office-furniture/office-sofa"
           },
           {
             "title": "MS Product",
-            "link": "/furniture/ms-product"
+            "link": "/office-furniture/ms-product"
           }
         ]
       }

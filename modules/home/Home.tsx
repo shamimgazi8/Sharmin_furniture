@@ -7,7 +7,7 @@ import OurProducts from './ourProducts';
 import PopulerFurniture from './populerFuniture';
 import CreationPurpose from './purpose';
 import Uniqueness from './uniqueness/Uniqueness';
-import SearchBar from '../@common/search';
+
 const items = [
   {
     src: 'https://www.bdfurnituresolution.com/images/stories/virtuemart/product/sunshine-bed-furniture-bdfs-dhaka.jpg',
