@@ -5,9 +5,6 @@ const ProductPage = () => {
   return (
     <>
       <Categories />
-      <Link href={'/'} className="btn-secondary">
-        Go Back Home
-      </Link>
     </>
   );
 };

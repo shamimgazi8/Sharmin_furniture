@@ -18,3 +18,6 @@
     color: red;
   }
 }
+:where(.css-dev-only-do-not-override-d2lrxs).ant-slider .ant-slider-rail {
+  background-color: rgb(110, 110, 110);
+}
