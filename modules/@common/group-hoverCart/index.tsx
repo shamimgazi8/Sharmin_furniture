@@ -10,8 +10,8 @@ const HoverCart = ({ data }: any) => {
           className="product group relative w-64 h-48 overflow-hidden "
         >
           <Image
-            height={200}
-            width={200}
+            height={300}
+            width={300}
             src={data?.imageUrl}
             alt="Modern Sofa"
             className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110"

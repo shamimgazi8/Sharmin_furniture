@@ -5,6 +5,7 @@ import { GoDotFill } from 'react-icons/go';
 import { GrGallery } from 'react-icons/gr';
 import { IoPlay } from 'react-icons/io5';
 import { excerpt } from '@/utils/utils';
+import { FaCartPlus } from 'react-icons/fa';
 interface BlogCardProps {
   data?: any;
   classes?: {
@@ -39,6 +40,30 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
         }`}
       >
         <div
+          key={data?.id}
+          className={` ${classes?.imageWrapper ? classes.imageWrapper : ''} product group relative  overflow-hidden`}
+        >
+          <Image
+            height={300}
+            width={300}
+            src={data?.imageUrl}
+            alt="Modern Sofa"
+            className={`object-cover ${
+              classes?.imageStyle ? classes.imageStyle : ''
+            } w-full h-full object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110`}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            <span className="text-white text-lg line-clamp-1">
+              {/* {data?.name}{' '} */}
+              <Link href={'#'}>
+                <button className=" btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]">
+                  <FaCartPlus className="" /> ADD TO CART
+                </button>
+              </Link>
+            </span>
+          </div>
+        </div>
+        {/* <div
           className={` ${classes?.imageWrapper ? classes.imageWrapper : ''}`}
         >
           <Image
@@ -70,7 +95,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
               }`}
             />
           </div>
-        </div>
+        </div> */}
         <div className={` ${classes?.body ? classes.body : ''}`}>
           <h3
             className={`line-clamp-2 group-hover:text-primary transition-all mb-[10px] ${

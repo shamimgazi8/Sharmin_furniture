@@ -1,5 +1,4 @@
 import HoverCart from '@/modules/@common/group-hoverCart';
-import Image from 'next/image';
 import Link from 'next/link';
 import { LuMoveRight } from 'react-icons/lu';
 import furnitureData from './../../../data/furniture-data.json';
