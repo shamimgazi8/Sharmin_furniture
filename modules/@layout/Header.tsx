@@ -24,7 +24,6 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [hasCookie, setHasCookie] = useState<any>();
   const [placement, setPlacement] = useState<DrawerProps['placement']>('left');
-
   const [scroll, setScroll] = useState(false);
 
   // Scroll Efect
@@ -64,6 +63,7 @@ const Header = () => {
     }
     setSelected(i);
   };
+  const [logo, setlogo] = useState('/misc/sharmin black.png');
 
   return (
     <>
@@ -78,7 +78,7 @@ const Header = () => {
             <div>
               <Link href="/">
                 <Image
-                  src="/misc/sharmin.png"
+                  src={`${logo}`}
                   width={450}
                   height={50}
                   alt="logo"
@@ -269,7 +269,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <ThemeToggleButton />
+        <ThemeToggleButton setlogo={setlogo} />
       </header>
 
       <Drawer

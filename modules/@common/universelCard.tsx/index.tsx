@@ -98,7 +98,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
         </div> */}
         <div className={` ${classes?.body ? classes.body : ''}`}>
           <h3
-            className={`line-clamp-2 group-hover:text-primary transition-all mb-[10px] ${
+            className={` group-hover:text-primary transition-all mb-[10px] ${
               classes?.name ? classes.name : ''
             }`}
           >

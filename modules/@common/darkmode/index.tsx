@@ -6,7 +6,7 @@ import { FaMoon } from 'react-icons/fa';
 const themeDark = 'dark';
 const themeLight = 'light';
 
-const ThemeToggleButton = () => {
+const ThemeToggleButton = ({ setlogo }: any) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -23,12 +23,12 @@ const ThemeToggleButton = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove(themeDark);
       localStorage.setItem('theme', themeLight);
-
+      setlogo('/misc/sharmin black.png');
       setIsDarkMode(false);
     } else {
       document.documentElement.classList.add(themeDark);
       localStorage.setItem('theme', themeDark);
-
+      setlogo('/misc/sharmin white.png');
       setIsDarkMode(true);
     }
   };

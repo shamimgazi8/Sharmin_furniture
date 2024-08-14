@@ -73,7 +73,7 @@ const Categories = () => {
                     } self-start`,
                     imageWrapper: '!mb-0 lg:!h-[190px] h-[210px] self-start',
                     imageStyle: '!mb-0 !h-full object-cover self-start',
-                    name: 'lg:!text-lg font-semibold text-[22px] !mb-3 self-start pl-5 line-clamp-1',
+                    name: 'lg:!text-lg font-semibold text-[22px] !mb-3 self-start pl-5 !line-clamp-1',
                     desc: ' hidden',
                     date: 'hidden ',
                   }}
