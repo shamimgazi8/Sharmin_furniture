@@ -19,19 +19,11 @@ const SearchBar: React.FC = () => {
 
   return (
     <>
-      <button className=" btn-primary" onClick={showModal}>
-        <RiSearchEyeLine className=" text-xl" />
-      </button>
-      <Modal
-        title="Search"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <div>
-          <Input></Input>
-        </div>
-      </Modal>
+      <input
+        className=" gradient-border outline-none transition-all p-2 rounded dark:bg-black dark:text-white"
+        placeholder="Search"
+        type="text "
+      />
     </>
   );
 };

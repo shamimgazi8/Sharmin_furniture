@@ -2,19 +2,19 @@
 import navData from '@/data/nav-data.json';
 import { Drawer, DrawerProps, Popover, RadioChangeEvent } from 'antd';
 // import Cookies from 'js-cookie';
-import dynamic from 'next/dynamic';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { FiChevronDown, FiChevronUp, FiHeart } from 'react-icons/fi';
-import { MdOutlineSwapCalls } from 'react-icons/md';
-import { useSelector } from 'react-redux';
+
 import ThemeToggleButton from '../@common/darkmode';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import SearchBar from '../@common/search';
 import Loginmodal from '../authentication/login/LoginModal';
 import SignUpModal from '../authentication/signup/SignUpmodal';
+import SearchAnt from '../@common/search/antdSearch';
 
 // const ProfileAvatar = dynamic(() => import('@/modules/@admin/avatar'), {
 //   ssr: false,
@@ -210,7 +210,8 @@ const Header = () => {
               {!hasCookie ? (
                 <Fragment>
                   <div className="flex items-center gap-3">
-                    <SearchBar />
+                    {/* <SearchBar /> */}
+                    <SearchAnt />
                     {/* <Link
                       href="/login"
                       className="btn btn-primary   text-gradient"
@@ -218,7 +219,7 @@ const Header = () => {
                       <span className="">Login</span>
                     </Link> */}
                     <Loginmodal />
-                    <SignUpModal />
+                    {/* <SignUpModal /> */}
                   </div>
                 </Fragment>
               ) : (

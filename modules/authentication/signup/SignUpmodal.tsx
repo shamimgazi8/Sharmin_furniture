@@ -58,7 +58,7 @@ const SignUpModal: React.FC = ({ button }: any) => {
                 <input
                   type="text"
                   id="username"
-                  className="mt-1 w-full px-3 py-2 border border-gray-300 text-black font-semibold rounded-md focus:outline-none focus:ring focus:border-none"
+                  className="gradient-border outline-none mt-1 w-full px-3 py-2  text-black font-semibold rounded-md transition-all"
                   value={username}
                   onChange={e => setUsername(e.target.value)}
                   required
@@ -71,7 +71,7 @@ const SignUpModal: React.FC = ({ button }: any) => {
                 <input
                   type="email"
                   id="email"
-                  className="mt-1 w-full px-3 py-2 border border-gray-300 text-black font-semibold rounded-md focus:outline-none focus:ring focus:border-none"
+                  className="gradient-border outline-none mt-1 w-full px-3 py-2  text-black font-semibold rounded-md transition-all"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   required
@@ -85,7 +85,7 @@ const SignUpModal: React.FC = ({ button }: any) => {
                   <input
                     type={showPassword ? 'text' : 'password'}
                     id="password"
-                    className="mt-1 text-black font-semibold w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-none"
+                    className="gradient-border outline-none mt-1 w-full px-3 py-2  text-black font-semibold rounded-md transition-all"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     required
@@ -114,7 +114,7 @@ const SignUpModal: React.FC = ({ button }: any) => {
                   <input
                     type={showConfirmPassword ? 'text' : 'password'}
                     id="confirm-password"
-                    className="mt-1 text-black font-semibold w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-none"
+                    className="gradient-border outline-none mt-1 w-full px-3 py-2  text-black font-semibold rounded-md transition-all"
                     value={confirmPassword}
                     onChange={e => setConfirmPassword(e.target.value)}
                     required

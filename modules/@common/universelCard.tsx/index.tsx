@@ -6,6 +6,7 @@ import { GrGallery } from 'react-icons/gr';
 import { IoPlay } from 'react-icons/io5';
 import { excerpt } from '@/utils/utils';
 import { FaCartPlus } from 'react-icons/fa';
+import { MdOutlineViewInAr } from 'react-icons/md';
 interface BlogCardProps {
   data?: any;
   classes?: {
@@ -33,9 +34,9 @@ interface BlogCardProps {
 const BlogCard = ({ data, classes, type }: BlogCardProps) => {
   return (
     <>
-      <Link
-        href={`/${'product'}/${data?.slug}`}
-        className={`grid group hover:text-inherit relative  ${
+      <div
+        // href={`/${'product'}/${data?.slug}`}
+        className={`grid group hover:text-inherit relative cursor-pointer  ${
           classes?.root ? classes.root : ''
         }`}
       >
@@ -53,14 +54,18 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
             } w-full h-full object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-110`}
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-            <span className="text-white text-lg line-clamp-1">
+            <div className="text-white text-lg line-clamp-1 flex gap-2 flex-col justify-center items-center">
               {/* {data?.name}{' '} */}
-              <Link href={'#'}>
-                <button className=" btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]">
-                  <FaCartPlus className="" /> ADD TO CART
+              <button className=" btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]">
+                <FaCartPlus className="" /> ADD TO CART
+              </button>
+              <Link href={`/${'product'}/${data?.slug}`}>
+                <button className=" btn-primary flex items-center justify-center gap-2 rounded-full text-[12px]">
+                  <MdOutlineViewInAr className="" />
+                  VIEW PRODUCT
                 </button>
               </Link>
-            </span>
+            </div>
           </div>
         </div>
         {/* <div
@@ -139,7 +144,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
             classes?.overlay ? classes.overlay : ''
           }`}
         />
-      </Link>
+      </div>
     </>
   );
 };

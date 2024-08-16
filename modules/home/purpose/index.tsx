@@ -11,7 +11,10 @@ const album = [
 ];
 const CreationPurpose = () => {
   return (
-    <div className=" grid grid-cols-[2fr_1fr_1fr_1fr] grid-rows-2 gap-2 mt-5">
+    <div
+      data-aos="zoom-in"
+      className=" grid grid-cols-[2fr_1fr_1fr_1fr] grid-rows-2 gap-2 mt-5"
+    >
       <div className=" row-span-2 flex flex-col justify-center items-end gap-2 mr-[50px]">
         <h1 className=" text-3xl font-bold">Creations with purpose</h1>
         <h2 className=" text-2xl font-normal gradient-text">

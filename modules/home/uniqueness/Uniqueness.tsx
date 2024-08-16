@@ -12,7 +12,7 @@ const Uniqueness = () => {
     textAlign: 'center',
   };
   return (
-    <section className=" mx-[100px] my-[50px]">
+    <section data-aos="fade-left" className=" mx-[100px] my-[50px]">
       <div className="grid grid-cols-2 grid-rows-2">
         <div className=" row-span-2 flex flex-col justify-center items-end gap-2 text-end mr-[50px]">
           <h1 className=" text-[50px]">

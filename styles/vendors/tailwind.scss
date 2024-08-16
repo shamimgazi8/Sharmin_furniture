@@ -67,3 +67,45 @@ body {
 .react-multi-carousel-dot.react-multi-carousel-dot--active button {
   background: rgb(255, 68, 68) !important;
 }
+
+@mixin gradient-border($color1, $color2, $color3, $color4) {
+  border: 1px solid transparent;
+  border-top: 1px solid $color1;
+  border-right: 1px solid $color2;
+  border-bottom: 1px solid $color3;
+  border-left: 1px solid $color4;
+}
+
+.gradient-border {
+  @include gradient-border(
+    #1e3a8a,
+    #10b981,
+    #8b5cf6,
+    #10b981
+  ); // Replace with your desired colors
+  &:focus {
+    @include gradient-border(
+      #10b981,
+      #8b5cf6,
+      #10b981,
+      #1e3a8a
+    ); // Different colors for focus state
+  }
+}
+
+.hidden-div {
+  position: absolute;
+  bottom: -100%; /* Start hidden below the viewport */
+  left: 0;
+  right: 0;
+  opacity: 0; /* Start with opacity 0 */
+  transition: all 0.5s ease-in-out; /* Transition for smooth animation */
+
+  &.show {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+.form-container {
+  transition: all 0.5s ease-in-out; /* Adjust transition duration and easing as needed */
+}
