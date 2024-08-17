@@ -77,18 +77,23 @@ body {
 }
 
 .gradient-border {
+  // background: linear-gradient(to right, #00b3ff, #10b981, #8b5cf6, #10b981);
+  // color: transparent;
+  // -webkit-text-fill-color: transparent;
+  // -webkit-background-clip: text;
+  // background-clip: text;
   @include gradient-border(
-    #1e3a8a,
-    #10b981,
-    #8b5cf6,
-    #10b981
+    #00b2f8,
+    #5a5e5d,
+    #1c1c1c,
+    #000000
   ); // Replace with your desired colors
   &:focus {
     @include gradient-border(
       #10b981,
-      #8b5cf6,
-      #10b981,
-      #1e3a8a
+      #363140,
+      #181818,
+      #303644
     ); // Different colors for focus state
   }
 }

@@ -16,7 +16,7 @@ const PopulerFurniture = () => {
           </div>
         </Link>
       </div>
-      <div className=" flex gap-8 justify-center">
+      <div className=" flex flex-wrap lg:flex-nowrap gap-8 justify-center">
         {furnitureData.slice(0, 4).map((item: any, i: any) => {
           return <HoverCart key={i} data={item} />;
         })}

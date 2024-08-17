@@ -35,7 +35,7 @@ const HomePage = () => {
       <OurProducts />
       <PopulerFurniture />
       <Uniqueness />
-      <div data-aos="fade-right" className=" grid grid-cols-2 mt-5">
+      <div data-aos="fade-right" className=" grid lg:grid-cols-2 mt-5">
         <MultiSlider height="400" width="700" itemsToShow={4} />
         <div className=" flex flex-col justify-center items-start text-start gap-4 ml-[20px]">
           <h1 className=" text-[50px]">
@@ -51,7 +51,7 @@ const HomePage = () => {
           </button>
         </div>
       </div>
-      <div className="  grid grid-cols-2 mt-5">
+      {/* <div className="  grid grid-cols-2 mt-5">
         <Image
           height={800}
           width={300}
@@ -66,7 +66,7 @@ const HomePage = () => {
           alt={'sharmin furn'}
           className="h-full w-full object-cover"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

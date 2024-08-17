@@ -3,14 +3,14 @@ import Cerasoul from '@/modules/@common/carasoul';
 const Hero = () => {
   return (
     <div className=" z-50 ">
-      <div className=" absolute w-[500px]  backdrop-blur-xl z-50 top-[200px] right-[100px] rounded-md p-5 ">
-        <div className=" w-[110px]">
+      <div className=" absolute lg:w-[500px] w-[200px]  backdrop-blur-xl z-50 lg:top-[200px] top-[70px] lg:right-[100px] right-[40px] rounded-md p-5 ">
+        <div className=" lg:w-[110px] ">
           <h3 className="text-white p-2">New Arrival</h3>
         </div>
-        <h1 className=" text-[50px] font-semibold text-black">
+        <h1 className=" lg:text-[50px] font-semibold text-black">
           <span className=" gradient-text">Discover</span> Our New Collection
         </h1>
-        <p className=" mb-3">
+        <p className=" mb-3 line-clamp-2 lg:line-clamp-6">
           Sharmin Furniture appears to be a local furniture store or brand,
           possibly based in Dhaka, Bangladesh. While there is limited online
           information available specifically about Sharmin Furniture, it&apos;s

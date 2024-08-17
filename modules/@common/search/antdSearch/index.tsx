@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AutoComplete, Input } from 'antd';
 import type { AutoCompleteProps } from 'antd';
+import { BsSearch } from 'react-icons/bs';
 
 const getRandomInt = (max: number, min = 0) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
@@ -49,7 +50,13 @@ const SearchAnt: React.FC = () => {
   };
 
   return (
-    <Input.Search size="large" placeholder="Search" enterButton />
+    <div className=" relative">
+      <input
+        placeholder="Search"
+        className=" dark:bg-transparent dark:text-white outline-none gradient-border px-2 py-1 transition-all"
+      />
+      <BsSearch className=" absolute right-3 top-[9px]   transition-all hover:text-purple-500 cursor-pointer " />
+    </div>
     // <AutoComplete
     //   popupMatchSelectWidth={252}
     //   style={{ width: 300 }}
