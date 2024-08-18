@@ -1,6 +1,6 @@
 import Cerasoul from '@/modules/@common/carasoul';
 import FullPageCarousel from '@/modules/@common/fullpageCarasoul';
-import data from './../../../data/dinningroom.json';
+import data from '../../../../data/dinningroom.json';
 const Hero = () => {
   return (
     <div className=" z-50 ">

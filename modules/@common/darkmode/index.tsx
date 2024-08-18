@@ -36,7 +36,7 @@ const ThemeToggleButton = ({ setlogo }: any) => {
   return (
     <button
       onClick={toggleTheme}
-      className=" text-[15px] fixed lg:top-4 lg:right-6 top-[22px] right-1 lg:p-3 p-[6px] bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-800 dark:hover:bg-gray-300 transition duration-300"
+      className=" text-[15px] fixed lg:top-5 lg:right-7 top-[22px] right-1 lg:p-[6px] p-[6px] bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-800 dark:hover:bg-gray-300 transition duration-300"
     >
       {isDarkMode ? <BiSolidSun /> : <FaMoon />}
     </button>

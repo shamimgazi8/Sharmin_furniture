@@ -17,5 +17,8 @@ export function capitalizeFirstLetter(string: any) {
   const letterCorrection = string.charAt(0).toUpperCase() + string.slice(1);
   const space = letterCorrection.replace('-', ' ');
 
-  return space;
+  return space
+    .split(' ')
+    .map((word: any) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }

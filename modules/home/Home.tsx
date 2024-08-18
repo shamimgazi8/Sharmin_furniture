@@ -1,11 +1,11 @@
 import Marquee from '../@common/marquee';
-import Hero from './Hero';
-import HeroGallery from './heroGallery';
-import LatestShots from './latestShots';
-import OurProducts from './ourProducts';
-import PopulerFurniture from './populerFuniture';
-import CreationPurpose from './purpose';
-import Uniqueness from './uniqueness/Uniqueness';
+import Hero from './@components/Hero';
+import HeroGallery from './@components/heroGallery';
+import LatestShots from './@components/latestShots';
+import OurProducts from './@components/ourProducts';
+import PopulerFurniture from './@components/populerFuniture';
+import CreationPurpose from './@components/purpose';
+import Uniqueness from './@components/uniqueness/Uniqueness';
 
 const HomePage = () => {
   return (

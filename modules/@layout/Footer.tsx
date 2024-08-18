@@ -8,6 +8,7 @@ import { IoCall } from 'react-icons/io5';
 import { FaCcVisa } from 'react-icons/fa';
 import { SiMastercard } from 'react-icons/si';
 import Image from 'next/image';
+const mailtoLink = `mailto:${'sharminfurniture@gmail.com'}?subject=${encodeURIComponent('furniture')}&body=${encodeURIComponent('')}`;
 
 const data = [
   {
@@ -123,12 +124,12 @@ const Footer = () => {
           <div className=" flex gap-2 items-center">
             {' '}
             <IoCall />
-            +880 1960475783
+            <a href={`tel:${'+880 1960475783'}`}>{'+880 1960475783'}</a>
           </div>
           <div className=" flex gap-2 items-center">
             {' '}
             <IoMdMail />
-            sharminfurniture@gmail.com
+            <a href={mailtoLink}>{'sharminfurniture@gmail.com'}</a>
           </div>
         </div>
         <div className=" flex justify-center items-center gap-4 flex-col">

@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import MultiSlider from '../home/multiCerasoul';
+import MultiSlider from '../home/@components/multiCerasoul';
 import Tab from '../@common/Tabs';
 const ProductDetails = () => {
   const { productDetails } = useParams();

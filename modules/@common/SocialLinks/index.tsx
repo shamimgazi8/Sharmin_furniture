@@ -7,7 +7,7 @@ import { IoIosLink } from 'react-icons/io';
 const socialData = [
   {
     id: 1,
-    link: '#',
+    link: 'https://www.facebook.com/sharminfurniturebd',
     icon: <ImFacebook />,
   },
   {
@@ -22,7 +22,7 @@ const socialData = [
   },
   {
     id: 4,
-    link: '#',
+    link: '/',
     icon: <IoIosLink />,
   },
   {
@@ -55,7 +55,7 @@ export const SocialLinks = ({ classes }: propTypes) => {
         return (
           <li key={i}>
             {/* <TempComp /> */}
-            <a href="#"> {item?.icon}</a>
+            <a href={item?.link}> {item?.icon}</a>
           </li>
         );
       })}

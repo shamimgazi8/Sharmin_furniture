@@ -1,6 +1,6 @@
 'use client';
 import navData from '@/data/nav-data.json';
-import { Drawer, DrawerProps } from 'antd';
+import { Drawer, DrawerProps, Dropdown, MenuProps, Space } from 'antd';
 // import Cookies from 'js-cookie';
 
 import Image from 'next/image';
@@ -14,11 +14,35 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 
 import Loginmodal from '../authentication/login/LoginModal';
 import SearchAnt from '../@common/search/antdSearch';
+import { IoArrowDownOutline } from 'react-icons/io5';
+import { CgProfile } from 'react-icons/cg';
+import { FaCartShopping } from 'react-icons/fa6';
 
 // const ProfileAvatar = dynamic(() => import('@/modules/@admin/avatar'), {
 //   ssr: false,
 // });
 
+const items: MenuProps['items'] = [
+  {
+    label: (
+      <div className=" w-full flex items-center justify-center">
+        <Loginmodal />
+      </div>
+    ),
+    key: '0',
+  },
+  {
+    label: <a href="https://www.aliyun.com">2nd menu item</a>,
+    key: '1',
+  },
+  {
+    type: 'divider',
+  },
+  {
+    label: '3rd menu item',
+    key: '3',
+  },
+];
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [hasCookie, setHasCookie] = useState<any>();
@@ -208,10 +232,34 @@ const Header = () => {
             <div className="flex items-center gap-2 lg:gap-4 rounded">
               {!hasCookie ? (
                 <Fragment>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 justify-center">
                     <SearchAnt />
+                    <Dropdown menu={{ items }} trigger={['click']}>
+                      <a
+                        className=" cursor-pointer"
+                        onClick={e => e.preventDefault()}
+                      >
+                        <Space>
+                          <CgProfile className=" text-2xl" />
+                        </Space>
+                      </a>
+                    </Dropdown>
+                    <div className="">
+                      <Dropdown menu={{ items }} trigger={['click']}>
+                        <a
+                          className=" cursor-pointer"
+                          onClick={e => e.preventDefault()}
+                        >
+                          <Space>
+                            <FaCartShopping className=" text-2xl" />
+                          </Space>
+                        </a>
+                      </Dropdown>
+                    </div>
 
-                    <Loginmodal />
+                    <ThemeToggleButton setlogo={setlogo} />
+
+                    {/* <Loginmodal /> */}
                     {/* <SignUpModal /> */}
                   </div>
                 </Fragment>
@@ -224,9 +272,6 @@ const Header = () => {
               )}
             </div>
           </div>
-        </div>
-        <div className="">
-          <ThemeToggleButton setlogo={setlogo} />
         </div>
       </header>
 
