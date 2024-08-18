@@ -9,6 +9,9 @@ const config: Config = {
 
   darkMode: 'class', // Enable dark mode using the 'class' strategy
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       boxShadow: {
         '3xl': '#1e3a8a)',

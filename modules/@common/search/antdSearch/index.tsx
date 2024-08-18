@@ -53,7 +53,7 @@ const SearchAnt: React.FC = () => {
     <div className=" relative">
       <input
         placeholder="Search"
-        className=" dark:bg-transparent dark:text-white outline-none gradient-border px-2 py-1 transition-all"
+        className="w-[100px] lg:w-full dark:bg-transparent dark:text-white outline-none gradient-border px-2 py-1 transition-all"
       />
       <BsSearch className=" absolute right-3 top-[9px]   transition-all hover:text-purple-500 cursor-pointer " />
     </div>

@@ -1,19 +1,18 @@
 'use client';
 import navData from '@/data/nav-data.json';
-import { Drawer, DrawerProps, Popover, RadioChangeEvent } from 'antd';
+import { Drawer, DrawerProps } from 'antd';
 // import Cookies from 'js-cookie';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 import { BiMenuAltLeft } from 'react-icons/bi';
-import { FiChevronDown, FiChevronUp, FiHeart } from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 import ThemeToggleButton from '../@common/darkmode';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import SearchBar from '../@common/search';
+
 import Loginmodal from '../authentication/login/LoginModal';
-import SignUpModal from '../authentication/signup/SignUpmodal';
 import SearchAnt from '../@common/search/antdSearch';
 
 // const ProfileAvatar = dynamic(() => import('@/modules/@admin/avatar'), {
@@ -210,58 +209,14 @@ const Header = () => {
               {!hasCookie ? (
                 <Fragment>
                   <div className="flex items-center gap-3">
-                    {/* <SearchBar /> */}
                     <SearchAnt />
-                    {/* <Link
-                      href="/login"
-                      className="btn btn-primary   text-gradient"
-                    >
-                      <span className="">Login</span>
-                    </Link> */}
+
                     <Loginmodal />
                     {/* <SignUpModal /> */}
                   </div>
                 </Fragment>
               ) : (
                 <Fragment>
-                  {/* Compare */}
-                  {/* <div className="cursor-pointer hover:text-hover">
-                    <Popover
-                      placement="bottomRight"
-                      content={compareContent}
-                      trigger="click"
-                    >
-                      <span className="block relative">
-                        <MdOutlineSwapCalls size={25} />
-
-                        {(compareInfo?.compareCOURSE !== 0 ||
-                          compareInfo?.compareUNIVERSITY !== 0) && (
-                          <span className="absolute box-content m-0 top-[-7px] right-[-5px] h-[15px] w-[15px] flex justify-center datas-center bg-primary !border-0 rounded-full text-white text-[10px] p-[2px]">
-                            {parseInt(compareInfo?.compareCOURSE) +
-                              parseInt(compareInfo?.compareUNIVERSITY)}
-                          </span>
-                        )}
-                      </span>
-                    </Popover>
-                  </div> */}
-                  {/* <div className="cursor-pointer hover:text-hover">
-                    <Popover
-                      placement="bottomRight"
-                      content={shortListContent}
-                      trigger="click"
-                    >
-                      <span className="block relative">
-                        <FiHeart size={25} />
-                        {(shortListInfo?.listCOURSE !== 0 ||
-                          shortListInfo?.listUNIVERSITY !== 0) && (
-                          <span className="absolute box-content m-0 top-[-7px] right-[-5px] h-[15px] w-[15px] flex justify-center datas-center bg-primary !border-0 rounded-full text-white text-[10px] p-[2px]">
-                            {shortListInfo?.listCOURSE +
-                              shortListInfo?.listUNIVERSITY}
-                          </span>
-                        )}
-                      </span>
-                    </Popover>
-                  </div> */}
                   <div className="flex items-center gap-3">
                     {/* <ProfileAvatar /> */}
                   </div>
@@ -270,7 +225,9 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <ThemeToggleButton setlogo={setlogo} />
+        <div className="">
+          <ThemeToggleButton setlogo={setlogo} />
+        </div>
       </header>
 
       <Drawer

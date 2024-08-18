@@ -93,7 +93,7 @@ const MultiSlider: React.FC<MyComponentProps> = ({
   const transformValue = -(currentIndex * itemWidthPercentage); // Move by percentage of item width
 
   return (
-    <div className="max-w-full flex justify-center items-center">
+    <div className="lg:max-w-full flex justify-center items-center">
       <div className="flex justify-center items-center">
         <button
           onClick={prev}

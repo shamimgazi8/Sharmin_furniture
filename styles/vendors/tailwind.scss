@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .container {
+    @apply max-w-[1350px] px-5 mx-auto w-full;
+  }
+}
+
 :root {
   --background-color: #ffffff;
   --text-color: #000000;

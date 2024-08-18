@@ -1,5 +1,6 @@
 import Cerasoul from '@/modules/@common/carasoul';
-
+import FullPageCarousel from '@/modules/@common/fullpageCarasoul';
+import data from './../../../data/dinningroom.json';
 const Hero = () => {
   return (
     <div className=" z-50 ">
@@ -21,6 +22,7 @@ const Hero = () => {
           <button className=" btn-secondary">Buy Now</button>
         </div>
       </div>
+      {/* <FullPageCarousel slides={data} /> */}
       <Cerasoul />
     </div>
   );
