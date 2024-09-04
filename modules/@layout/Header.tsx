@@ -43,6 +43,24 @@ const items: MenuProps['items'] = [
     key: '3',
   },
 ];
+
+const cartItem: MenuProps['items'] = [
+  {
+    label: <div className=" w-full flex items-center justify-center"></div>,
+    key: '0',
+  },
+  {
+    label: <a href="https://www.aliyun.com">2nd menu item</a>,
+    key: '1',
+  },
+  {
+    type: 'divider',
+  },
+  {
+    label: '3rd menu item',
+    key: '3',
+  },
+];
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [hasCookie, setHasCookie] = useState<any>();
@@ -245,7 +263,7 @@ const Header = () => {
                       </a>
                     </Dropdown>
                     <div className="">
-                      <Dropdown menu={{ items }} trigger={['click']}>
+                      <Dropdown trigger={['click']}>
                         <a
                           className=" cursor-pointer"
                           onClick={e => e.preventDefault()}

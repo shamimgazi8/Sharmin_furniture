@@ -2,11 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoDotFill } from 'react-icons/go';
-import { GrGallery } from 'react-icons/gr';
-import { IoPlay } from 'react-icons/io5';
 import { excerpt } from '@/utils/utils';
 import { FaCartPlus } from 'react-icons/fa';
 import { MdOutlineViewInAr } from 'react-icons/md';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem } from './../../../appstore/reducers/cartReducer';
+
 interface BlogCardProps {
   data?: any;
   classes?: {
@@ -32,6 +34,11 @@ interface BlogCardProps {
   type?: string;
 }
 const BlogCard = ({ data, classes, type }: BlogCardProps) => {
+  const dispatch = useDispatch();
+  const handleAddItem = (item: any) => {
+    dispatch(addItem(item));
+  };
+
   return (
     <>
       <div
@@ -56,7 +63,10 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
             <div className="text-white text-lg line-clamp-1 flex gap-2 flex-col justify-center items-center">
               {/* {data?.name}{' '} */}
-              <button className=" btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]">
+              <button
+                onClick={() => handleAddItem(data)}
+                className=" btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]"
+              >
                 <FaCartPlus className="" /> ADD TO CART
               </button>
               <Link href={`/${'product'}/${data?.slug}`}>

@@ -25,7 +25,7 @@ const Categories = () => {
 
   return (
     <section>
-      <CategoryHero data={data} categorySlug={categorySlug} />
+      <CategoryHero data={data} slug={categorySlug} />
       <div className="container mx-auto">
         <div className="mb-5">
           <Breadcrumb items={breadcrumbs} />

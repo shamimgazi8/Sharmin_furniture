@@ -5,8 +5,10 @@ import './../styles/main.scss';
 const inter = Inter({ subsets: ['latin'] });
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import store from './../appstore/store';
 
 import { useEffect } from 'react';
+import { Provider } from 'react-redux';
 
 // export const metadata: Metadata = {
 //   title: 'Sharmin Furniture',
@@ -26,8 +28,10 @@ export default function RootLayout({
     });
   }, []);
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>{children}</body>
-    </html>
+    <Provider store={store}>
+      <html lang="en">
+        <body className={`${inter.className}`}>{children}</body>
+      </html>
+    </Provider>
   );
 }
