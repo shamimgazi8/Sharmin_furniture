@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoDotFill } from 'react-icons/go';
@@ -6,7 +6,7 @@ import { excerpt } from '@/utils/utils';
 import { FaCartPlus } from 'react-icons/fa';
 import { MdOutlineViewInAr } from 'react-icons/md';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addItem } from './../../../appstore/reducers/cartReducer';
 
 interface BlogCardProps {
@@ -36,24 +36,42 @@ interface BlogCardProps {
 
 const BlogCard = ({ data, classes, type }: BlogCardProps) => {
   const dispatch = useDispatch();
+  const [isAdded, setIsAdded] = useState(false);
+
+  // Check if item is already in cart (localStorage)
+  useEffect(() => {
+    const cartItems =
+      typeof window !== 'undefined' && localStorage.getItem('cartItems')
+        ? JSON.parse(localStorage.getItem('cartItems') || '[]')
+        : [];
+
+    const itemInCart = cartItems.find((item: any) => item.id === data?.id);
+    if (itemInCart) {
+      setIsAdded(true);
+    }
+  }, [data?.id]);
 
   const handleAddItem = (item: any) => {
-    // Add item to redux state
-    dispatch(addItem(item));
+    if (!isAdded) {
+      // Add item to redux state
+      dispatch(addItem(item));
 
-    // Get current cart items from localStorage
-    const cartItems = typeof window !== 'undefined' && localStorage.getItem('cartItems')
-      ? JSON.parse(localStorage.getItem('cartItems') || '[]')
-      : [];
+      // Get current cart items from localStorage
+      const cartItems =
+        typeof window !== 'undefined' && localStorage.getItem('cartItems')
+          ? JSON.parse(localStorage.getItem('cartItems') || '[]')
+          : [];
 
-    // Add new item to the cart
-    const updatedCartItems = [...cartItems, item];
+      // Add new item to the cart
+      const updatedCartItems = [...cartItems, item];
 
-    // Save updated cart to localStorage
-    typeof window !== 'undefined' &&
-      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+      // Save updated cart to localStorage
+      typeof window !== 'undefined' &&
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
 
-    console.log('Item added to cart:', updatedCartItems);
+      console.log('Item added to cart:', updatedCartItems);
+      setIsAdded(true); // Update button to reflect item was added
+    }
   };
 
   return (
@@ -80,9 +98,12 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
             <div className="text-white text-lg line-clamp-1 flex gap-2 flex-col justify-center items-center">
               <button
                 onClick={() => handleAddItem(data)}
-                className="btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]"
+                disabled={isAdded} // Disable button if item is already added
+                className={`${
+                  isAdded ? 'bg-gray-400 py-1 px-2' : 'btn-secondary'
+                } flex items-center justify-center gap-2 rounded-full text-[12px]`}
               >
-                <FaCartPlus className="" /> ADD TO CART
+                <FaCartPlus className="" /> {isAdded ? 'ADDED' : 'ADD TO CART'}
               </button>
               <Link href={`/${'product'}/${data?.slug}`}>
                 <button className="btn-primary flex items-center justify-center gap-2 rounded-full text-[12px]">

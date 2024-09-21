@@ -1,47 +1,29 @@
 'use client';
 import navData from '@/data/nav-data.json';
-import { Drawer, DrawerProps, Dropdown, MenuProps, Space,Menu } from 'antd';
+import { Drawer, DrawerProps } from 'antd';
 // import Cookies from 'js-cookie';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-
 import ThemeToggleButton from '../@common/darkmode';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-
-import Loginmodal from '../authentication/login/LoginModal';
 import SearchAnt from '../@common/search/antdSearch';
-import { CgProfile } from 'react-icons/cg';
-import { FaCartShopping } from 'react-icons/fa6';
+import ShoppingCart from '../@common/ShoppingCart';
+import ProfileAvater from '../@common/ProfileAvater';
 
 // const ProfileAvatar = dynamic(() => import('@/modules/@admin/avatar'), {
 //   ssr: false,
 // });
 
-const getCartItems = () => {
-  if (typeof window !== 'undefined') {
-    const storedCartItems = localStorage.getItem('cartItems');
-    return storedCartItems ? JSON.parse(storedCartItems) : [];
-  }
-  return [];
-};
-
 const Header = () => {
-  const [cartItems, setCartItems] = useState<any[]>([]);
   const [open, setOpen] = useState(false);
   const [hasCookie, setHasCookie] = useState<any>();
   const [placement, setPlacement] = useState<DrawerProps['placement']>('left');
   const [scroll, setScroll] = useState(false);
 
   // Scroll Efect
-
-  useEffect(() => {
-    const items = getCartItems();
-    setCartItems(items);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,46 +40,6 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const cartMenuItems: MenuProps['items'] = [
-    {
-      label: (
-        <div>
-        <h2 className=' mb-5 text-3xl font-semibold'>Your Cart</h2>
-        {cartItems.length > 0 ? (
-          cartItems.map((item, index) => (
-            <div className=' mb-3' key={index}>
-              <div className=' flex gap-4'>
-                <Image height={50} width={50} alt='item image' src={item?.imageUrl}/>
-                <div>
-
-                <h3>{item.name}</h3>
-                <div className=' flex gap-5'>
-                  
-                <h3>Price: {item?.price}TK</h3>
-                <p>Quantity:1</p>
-                </div>
-                </div>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p>Your cart is empty.</p>
-        )}
-      </div>
-      ),
-      key: '0',
-    }
-  ];
-  const Profileitems: MenuProps['items'] = [
-    {
-      label: (
-        <div className=" w-full flex items-center justify-center">
-          <Loginmodal />
-        </div>
-      ),
-      key: '0',
-    }
-  ];
 
   // const shortListInfo = useSelector((state: any) => state.shortList_Slice);
   // const compareInfo = useSelector((state: any) => state.compare_Slice);
@@ -262,56 +204,35 @@ const Header = () => {
               </ul>
             </nav>
             <div className="flex items-center justify-end gap-2 lg:gap-4 rounded">
-              {!hasCookie ? (
+              {hasCookie ? (
                 <Fragment>
                   <div className="flex items-center gap-3 justify-center">
-                    <div className='hidden lg:flex'>
-
-                    <SearchAnt />
+                    <div className="hidden lg:flex">
+                      <SearchAnt />
                     </div>
-                    <Dropdown menu={{ items:  Profileitems }} trigger={['click']}>
-                      <a  
-                        className="cursor-pointer"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <Space className=' flex justify-center items-center'>
-                          <CgProfile className=" text-[25px]" />
-                        </Space>
-                      </a>
-                    </Dropdown>
-                    <div className="">
-                      <Dropdown menu={{ items: cartMenuItems }} trigger={['click']}>
-                        <a
-                          className="cursor-pointer"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <Space className=' flex justify-center items-center'>
-                            <FaCartShopping className=" text-[25px]" />
-                          </Space>
-                        </a>
-                      </Dropdown>
-                    </div>
-
+                    <ProfileAvater />
+                    <ShoppingCart needtoLogin={true} />
                     <ThemeToggleButton setlogo={setlogo} />
-
-                    {/* <Loginmodal /> */}
-                    {/* <SignUpModal /> */}
                   </div>
                 </Fragment>
               ) : (
                 <Fragment>
                   <div className="flex items-center gap-3">
-                    {/* <ProfileAvatar /> */}
+                    <div className="hidden lg:flex">
+                      <SearchAnt />
+                    </div>
+                    <ProfileAvater />
+                    <ShoppingCart />
+                    <ThemeToggleButton setlogo={setlogo} />
                   </div>
                 </Fragment>
               )}
             </div>
           </div>
-          <div className='flex lg:hidden mb-[20px] justify-center w-full items-center'>
-          <SearchAnt />
+          <div className="flex lg:hidden mb-[20px] justify-center w-full items-center">
+            <SearchAnt />
+          </div>
         </div>
-        </div>
-      
       </header>
 
       <Drawer
