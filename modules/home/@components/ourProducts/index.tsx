@@ -54,7 +54,7 @@ const products = [
 
 const OurProducts = () => {
   return (
-    <section data-aos="fade-left" className=" lg:px-0 px-5 py-12 mt-[50px]">
+    <section data-aos="fade-bottom" className=" lg:px-0 px-5 py-12 mt-[50px]">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Our Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -23,14 +23,7 @@ const searchResult = (query: string) =>
           >
             <span>
               Found {query}
-              {/* on{' '}
-              <a
-                href={`https://s.taobao.com/search?q=${query}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {category}
-              </a> */}
+
             </span>
             <span>{getRandomInt(200, 100)} results</span>
           </div>
@@ -50,23 +43,14 @@ const SearchAnt: React.FC = () => {
   };
 
   return (
-    <div className=" relative">
+    <div className=" relative w-full">
       <input
         placeholder="Search"
-        className="w-[100px] rounded-full lg:w-full dark:bg-transparent dark:text-white bg-transparent outline-none border-black border-[1px] dark:border-white px-2 py-1 transition-all placeholder:dark:text-white placeholder:text-black"
+        className=" rounded-full w-[100%] dark:bg-transparent dark:text-white bg-transparent outline-none border-black border-[1px] dark:border-white px-2 py-1 transition-all placeholder:dark:text-white placeholder:text-black"
       />
       <BsSearch className=" absolute right-3 top-[9px]   transition-all hover:text-purple-500 cursor-pointer " />
     </div>
-    // <AutoComplete
-    //   popupMatchSelectWidth={252}
-    //   style={{ width: 300 }}
-    //   options={options}
-    //   onSelect={onSelect}
-    //   onSearch={handleSearch}
-    //   size="large"
-    // >
 
-    // </AutoComplete>
   );
 };
 

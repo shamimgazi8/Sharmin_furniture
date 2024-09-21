@@ -69,7 +69,7 @@ const data = [
 
 const Footer = () => {
   return (
-    <footer className="dark:bg-gray-800 bg-gray-200 mt-auto bg-footer text-footertext lg:pt-[20px] py-[40px] ">
+    <footer className="dark:bg-gray-800 bg-gray-200 mt-auto  bg-footer text-footertext lg:pt-[80px] py-[40px] ">
       <div className=" lg:w-[30%] container mb-10 lg:px-0 px-10">
         <h1 className=" gradient-text lg:text-3xl text-xl font-semibold text-center">
           INSPIRATION, DELIVERED

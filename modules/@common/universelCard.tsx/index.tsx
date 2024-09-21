@@ -33,23 +33,39 @@ interface BlogCardProps {
   };
   type?: string;
 }
+
 const BlogCard = ({ data, classes, type }: BlogCardProps) => {
   const dispatch = useDispatch();
+
   const handleAddItem = (item: any) => {
+    // Add item to redux state
     dispatch(addItem(item));
+
+    // Get current cart items from localStorage
+    const cartItems = typeof window !== 'undefined' && localStorage.getItem('cartItems')
+      ? JSON.parse(localStorage.getItem('cartItems') || '[]')
+      : [];
+
+    // Add new item to the cart
+    const updatedCartItems = [...cartItems, item];
+
+    // Save updated cart to localStorage
+    typeof window !== 'undefined' &&
+      localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+
+    console.log('Item added to cart:', updatedCartItems);
   };
 
   return (
     <>
       <div
-        // href={`/${'product'}/${data?.slug}`}
-        className={`grid group hover:text-inherit relative cursor-pointer  ${
+        className={`grid group hover:text-inherit relative cursor-pointer ${
           classes?.root ? classes.root : ''
         }`}
       >
         <div
           key={data?.id}
-          className={` ${classes?.imageWrapper ? classes.imageWrapper : ''} product group relative  overflow-hidden`}
+          className={` ${classes?.imageWrapper ? classes.imageWrapper : ''} product group relative overflow-hidden`}
         >
           <Image
             height={300}
@@ -62,15 +78,14 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
             <div className="text-white text-lg line-clamp-1 flex gap-2 flex-col justify-center items-center">
-              {/* {data?.name}{' '} */}
               <button
                 onClick={() => handleAddItem(data)}
-                className=" btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]"
+                className="btn-secondary flex items-center justify-center gap-2 rounded-full text-[12px]"
               >
                 <FaCartPlus className="" /> ADD TO CART
               </button>
               <Link href={`/${'product'}/${data?.slug}`}>
-                <button className=" btn-primary flex items-center justify-center gap-2 rounded-full text-[12px]">
+                <button className="btn-primary flex items-center justify-center gap-2 rounded-full text-[12px]">
                   <MdOutlineViewInAr className="" />
                   VIEW PRODUCT
                 </button>
@@ -78,52 +93,19 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
             </div>
           </div>
         </div>
-        {/* <div
-          className={` ${classes?.imageWrapper ? classes.imageWrapper : ''}`}
-        >
-          <Image
-            src={data?.imageUrl || '/images/misc/image_placeholder_big.webp'}
-            alt="Top Stories"
-            width={960}
-            height={540}
-            className={`object-cover ${
-              classes?.imageStyle ? classes.imageStyle : ''
-            }`}
-          />
-          <div
-            className={`hidden items-center justify-center rounded-full  ${
-              classes?.iconWrapper ? classes.iconWrapper : ``
-            }`}
-          >
-            <IoPlay
-              className={`text-white ${classes?.icon ? classes.icon : ``}`}
-            />
-          </div>
-          <div
-            className={`hidden items-center justify-center rounded-full  ${
-              classes?.galleryWrapper ? classes.galleryWrapper : ``
-            }`}
-          >
-            <GrGallery
-              className={`text-black ${
-                classes?.icongallery ? classes.icongallery : ``
-              }`}
-            />
-          </div>
-        </div> */}
         <div className={` ${classes?.body ? classes.body : ''}`}>
           <h3
-            className={` group-hover:text-primary transition-all mb-[10px] ${
+            className={`group-hover:text-primary transition-all mb-[10px] ${
               classes?.name ? classes.name : ''
             }`}
           >
             {data?.highlight && (
               <span
                 className={`inline-flex items-center gap-1 pr-1 ${
-                  classes?.highlight ? classes.highlight : ``
+                  classes?.highlight ? classes.highlight : ''
                 }`}
               >
-                <span className=" mb-0 text-primary font-medium leading-[25px]">
+                <span className="mb-0 text-primary font-medium leading-[25px]">
                   {excerpt(data?.highlight, 12)}
                 </span>
                 <GoDotFill className="text-primary text-sm" />
@@ -132,9 +114,7 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
             {data?.name}
           </h3>
           {data?.excerpt && (
-            <p
-              className={`line-clamp-4  ${classes?.desc ? classes?.desc : ''}`}
-            >
+            <p className={`line-clamp-4 ${classes?.desc ? classes?.desc : ''}`}>
               {data?.excerpt}
             </p>
           )}
@@ -144,18 +124,9 @@ const BlogCard = ({ data, classes, type }: BlogCardProps) => {
             {data?.publishedAt}
           </span>
         </div>
-        {data?.excerpt && (
-          <p className={` hidden ${classes?.hero ? classes?.hero : ''}`}>
-            {data?.excerpt}
-          </p>
-        )}
-        <div
-          className={`hidden w-full h-full absolute top-0 left-0 blog_card_overlay ${
-            classes?.overlay ? classes.overlay : ''
-          }`}
-        />
       </div>
     </>
   );
 };
+
 export default BlogCard;

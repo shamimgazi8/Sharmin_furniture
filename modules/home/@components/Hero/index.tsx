@@ -4,7 +4,7 @@ import data from '../../../../data/dinningroom.json';
 const Hero = () => {
   return (
     <div className=" z-50 ">
-      <div className=" absolute lg:w-[500px] w-[200px]  backdrop-blur-xl z-50 lg:top-[200px] top-[70px] lg:right-[100px] right-[40px] rounded-md p-5 ">
+      <div className=" absolute lg:w-[500px] w-[200px]  backdrop-blur-xl z-50 lg:top-[200px] top-[140px] lg:right-[100px] right-[40px] rounded-md p-5 ">
         <div className=" lg:w-[110px] ">
           <h3 className="text-white p-2">New Arrival</h3>
         </div>
