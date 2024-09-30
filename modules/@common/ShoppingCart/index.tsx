@@ -1,69 +1,115 @@
 import Loginmodal from '@/modules/authentication/login/LoginModal';
-import { Dropdown, MenuProps, Space } from 'antd';
+import { Popover, Space } from 'antd';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { FaCartShopping } from 'react-icons/fa6';
+import { TiDelete } from 'react-icons/ti';
+import { Tooltip } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeItem } from '@/appstore/reducers/cartReducer';
 
-const getCartItems = () => {
-  if (typeof window !== 'undefined') {
-    const storedCartItems = localStorage.getItem('cartItems');
-    return storedCartItems ? JSON.parse(storedCartItems) : [];
-  }
-  return [];
-};
 const ShoppingCart = ({ needtoLogin }: any) => {
-  useEffect(() => {
-    const items = getCartItems();
-    setCartItems(items);
-  }, []);
+  const dispatch = useDispatch();
+  const cartItemsRTK = useSelector((state: any) => state.cart.items);
 
+  const handelRemoveItem = (item: any) => {
+    dispatch(removeItem(item?.id));
+  };
+  const handleOpenChange = (newOpen: any) => {
+    setOpen(newOpen);
+  };
+  const [quantity, setQuantity] = useState(1);
+
+  const increaseQuantity = () => {
+    setQuantity(prevQuantity => prevQuantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(prevQuantity => prevQuantity - 1);
+    }
+  };
+  const [open, setOpen] = useState(false);
   const [cartItems, setCartItems] = useState<any[]>([]);
-  const cartMenuItems: MenuProps['items'] = [
-    {
-      label: needtoLogin ? (
-        <>
-          You need to Login first for add item to cart! <Loginmodal />
-        </>
-      ) : (
-        <div>
-          <h2 className=" mb-5 text-3xl font-semibold">Your Cart</h2>
-          {cartItems.length > 0 ? (
-            cartItems.map((item, index) => (
-              <div className=" mb-3" key={index}>
-                <div className=" flex gap-4">
-                  <Image
-                    height={50}
-                    width={50}
-                    alt="item image"
-                    src={item?.imageUrl}
-                  />
+  useEffect(() => {
+    setCartItems(cartItemsRTK);
+  }, [cartItemsRTK?.length]);
+  const CartContent = () => {
+    return (
+      <div className=" px-2 py-4 bg-gray-200 rounded-md flex flex-col gap-3">
+        {cartItems?.length > 0
+          ? cartItems?.map((item: any, i: any) => {
+              return (
+                <div
+                  className=" grid grid-cols-4 gap-4 items-center lg:w-[400px]"
+                  key={i}
+                >
                   <div>
-                    <h3>{item.name}</h3>
-                    <div className=" flex gap-5">
-                      <h3>Price: {item?.price}TK</h3>
-                      <p>Quantity:1</p>
+                    <Image
+                      height={30}
+                      width={40}
+                      alt="item photo"
+                      src={
+                        item?.image
+                          ? item?.image
+                          : 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png'
+                      }
+                    />
+                  </div>
+                  <div>{item?.name}</div>
+                  <div>{(item?.price * quantity).toFixed(2)} ৳</div>
+                  <div className="flex items-center">
+                    <button
+                      onClick={
+                        quantity === 1
+                          ? () => handelRemoveItem(item)
+                          : decreaseQuantity
+                      }
+                      className={`${quantity === 1 ? 'px-1 py-1 bg-red-500 rounded hover:bg-red-600 transition-all' : 'px-2 py-1 bg-gray-300 rounded hover:bg-gray-400'}`}
+                    >
+                      {quantity === 1 ? (
+                        <div>
+                          <Tooltip title="Remove Item">
+                            <TiDelete className=" text-xl text-white" />
+                          </Tooltip>
+                        </div>
+                      ) : (
+                        '-'
+                      )}
+                    </button>
+                    <div className="text-lg font-medium  w-[25px] text-center ">
+                      {quantity}
                     </div>
+                    <button
+                      onClick={increaseQuantity}
+                      className="px-2 py-1 bg-gray-300 rounded hover:bg-gray-400"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <p>Your cart is empty.</p>
-          )}
-        </div>
-      ),
-      key: '0',
-    },
-  ];
+              );
+            })
+          : 'Cart is Empty'}
+      </div>
+    );
+  };
+
   return (
     <div className="">
-      <Dropdown menu={{ items: cartMenuItems }} trigger={['click']}>
+      <Popover
+        content={<CartContent />}
+        title="Shopping Cart"
+        trigger="click"
+        open={open}
+        onOpenChange={handleOpenChange}
+      >
         <a className="cursor-pointer" onClick={e => e.preventDefault()}>
           <Space className=" flex justify-center items-center">
             <FaCartShopping className=" text-[25px]" />
           </Space>
         </a>
-      </Dropdown>
+      </Popover>
     </div>
   );
 };

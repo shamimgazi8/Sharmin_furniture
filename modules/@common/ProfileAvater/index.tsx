@@ -1,27 +1,29 @@
 import Loginmodal from '@/modules/authentication/login/LoginModal';
-import { Dropdown, MenuProps, Space } from 'antd';
+import { Dropdown, MenuProps, Popover, Space } from 'antd';
+import { useState } from 'react';
 import { CgProfile } from 'react-icons/cg';
 
 const ProfileAvater = () => {
-  const Profileitems: MenuProps['items'] = [
-    {
-      label: (
-        <div className=" w-full flex items-center justify-center">
-          <Loginmodal />
-        </div>
-      ),
-      key: '0',
-    },
-  ];
+  const handleOpenChange = (newOpen: any) => {
+    setOpen(newOpen);
+  };
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
-      <Dropdown menu={{ items: Profileitems }} trigger={['click']}>
+      <Popover
+        content={<div>Profile Content</div>}
+        title="Profile"
+        trigger="click"
+        open={open}
+        onOpenChange={handleOpenChange}
+      >
         <a className="cursor-pointer" onClick={e => e.preventDefault()}>
           <Space className=" flex justify-center items-center">
             <CgProfile className=" text-[25px]" />
           </Space>
         </a>
-      </Dropdown>
+      </Popover>
     </div>
   );
 };
