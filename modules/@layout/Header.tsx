@@ -63,7 +63,7 @@ const Header = () => {
   const [logo, setlogo] = useState('/misc/sharmin-black.png');
   useEffect(() => {
     () => {
-      setlogo('/misc/sharmin-black.png');
+      setlogo('/sharmin-black.png');
     };
   }, []);
 
