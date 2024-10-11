@@ -2,12 +2,12 @@ import { Image } from 'antd';
 import Link from 'next/link';
 
 const album = [
-  '/furniture/up10.jpg',
-  '/furniture/up9.jpg',
-  '/furniture/up8.jpg',
-  '/furniture/up7.jpg',
-  '/furniture/up6.jpg',
-  '/furniture/up5.jpg',
+  'https://img.freepik.com/premium-photo/contemporary-living-room-interior-featuring-photo-frame-placeholder-brown-sofa-wooden-coffee_410516-90392.jpg',
+  'https://img.freepik.com/premium-photo/comfortable-warm-design-easterthemed-living-room-with-placeholder-poster-frame_410516-90301.jpg',
+  'https://img.freepik.com/premium-photo/modern-interior-design-furniture-generative-ai_779468-13709.jpg',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA3ibqpiFNxP25VYH31zOZ1QXXGZy7zamL3M4HLp-TnY2v4RalWvdjfc8IyChdLSLa5zw&usqp=CAU',
+  'https://img.freepik.com/premium-photo/spacious-living-room-with-large-window-furniture-generative-ai_410516-63862.jpg',
+  'https://img.freepik.com/premium-photo/luxury-modern-blue-living-room-interior-with-geometric-form-patterned-wall-generative-ai_779468-12036.jpg',
 ];
 const CreationPurpose = () => {
   return (
