@@ -23,12 +23,12 @@ const ThemeToggleButton = ({ setlogo }: any) => {
     if (isDarkMode) {
       document.documentElement.classList.remove(themeDark);
       localStorage.setItem('theme', themeLight);
-      setlogo('/misc/sharmin black.png');
+      setlogo('/misc/sharmin-black.png');
       setIsDarkMode(false);
     } else {
       document.documentElement.classList.add(themeDark);
       localStorage.setItem('theme', themeDark);
-      setlogo('/misc/sharmin white.png');
+      setlogo('/misc/sharmin-white.png');
       setIsDarkMode(true);
     }
   };
