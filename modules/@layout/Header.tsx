@@ -63,7 +63,7 @@ const Header = () => {
   const [logo, setlogo] = useState('/misc/sharmin-black.png');
   useEffect(() => {
     () => {
-      setlogo('/sharmin-black.png');
+      setlogo('/public/sharmin-black.png');
     };
   }, []);
 
@@ -80,7 +80,7 @@ const Header = () => {
             <div>
               <Link href="/">
                 <Image
-                  src={`${logo}`}
+                  src={`${logo ? logo : '/public/sharmin-black.png'}`}
                   width={450}
                   height={50}
                   alt="logo"
