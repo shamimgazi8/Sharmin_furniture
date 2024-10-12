@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {
   MdOutlineKeyboardDoubleArrowLeft,
   MdOutlineKeyboardDoubleArrowRight,
-  MdOutlineNavigateNext,
 } from 'react-icons/md';
 
 interface CarouselProps {
