@@ -18,7 +18,7 @@ const Cerasoul = (imgObject: any) => {
         </div>
         <div className=" lg:h-[100vh] ">
           <Image
-            src="/furniture/up4.jpg"
+            src="/furniture/up2.jpg"
             height={1000}
             width={2000}
             alt="hero-one"
