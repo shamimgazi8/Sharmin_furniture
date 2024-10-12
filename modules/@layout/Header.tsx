@@ -60,10 +60,10 @@ const Header = () => {
     }
     setSelected(i);
   };
-  const [logo, setlogo] = useState('/misc/sharmin-black.png');
+  const [logo, setlogo] = useState('/sharmin-black.png');
   useEffect(() => {
     () => {
-      setlogo('/public/sharmin-black.png');
+      setlogo('/sharmin-white.png');
     };
   }, []);
 
