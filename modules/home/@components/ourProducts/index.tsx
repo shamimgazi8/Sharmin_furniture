@@ -58,29 +58,33 @@ const OurProducts = () => {
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Our Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map(product => (
-            <div
-              key={product.id}
-              className=" shadow-3xl rounded-lg overflow-hidden border-[1px]"
-            >
-              <Image
-                height={400}
-                width={300}
-                src={`${product.imageUrl}`}
-                alt={product.name}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                <p className="text-gray-300 mb-4">{product.description}</p>
-                <p className="text-sm font-semibold">
-                  <span>Starting From: </span>
-                  {product.price}
-                </p>
-                <button className="btn-secondary mt-5">View Details</button>
+          {products.map((product: any, i: any) => {
+            const animation = i % 2;
+            return (
+              <div
+                data-aos={`${animation === 0 ? 'fade-right' : 'fade-left'}`}
+                key={product.id}
+                className=" shadow-3xl rounded-lg overflow-hidden border-[1px]"
+              >
+                <Image
+                  height={400}
+                  width={300}
+                  src={`${product.imageUrl}`}
+                  alt={product.name}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
+                  <p className="text-gray-300 mb-4">{product.description}</p>
+                  <p className="text-sm font-semibold">
+                    <span>Starting From: </span>
+                    {product.price}
+                  </p>
+                  <button className="btn-secondary mt-5">View Details</button>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

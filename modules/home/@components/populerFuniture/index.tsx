@@ -5,7 +5,7 @@ import furnitureData from '../../../../data/furniture-data.json';
 
 const PopulerFurniture = () => {
   return (
-    <div data-aos="fade-right" className=" mx-[70px]">
+    <div data-aos="fade-right" className=" lg:mx-[70px]">
       <div>
         <Link className="group" href={'/populer-furniture'}>
           <div className=" flex items-center justify-center gap-5 text-2xl mb-5  transition-all  ">

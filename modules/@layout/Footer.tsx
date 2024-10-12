@@ -46,38 +46,32 @@ const data = [
 
   {
     title: 'Contact Info',
-    jsx: (
-      <div className="flex flex-col gap-4">
-        <div className="flex gap-3">
-          <SlLocationPin className="text-lg flex-shrink-0 mt-1" />
-          <span>275 Quadra Street Victoria Road, New York</span>
-        </div>
-        <a className="flex gap-3 group" href="tel:+12 345 6789">
-          <BsTelephone className="text-lg flex-shrink-0 mt-1" />
-          <span className="group-hover:text-gradient">+12 345 6789</span>
-        </a>
-        <a className="flex gap-3 group" href="mailto:info@worldunihub.com">
-          <FiMail className="text-lg flex-shrink-0 mt-1" />
-          <span className="group-hover:text-gradient">
-            info@worldunihub.com
-          </span>
-        </a>
-      </div>
-    ),
   },
 ];
 
 const Footer = () => {
   return (
     <footer className="dark:bg-gray-800 bg-gray-200 mt-auto  bg-footer text-footertext lg:pt-[80px] py-[40px] ">
-      <div className=" lg:w-[30%] container mb-10 lg:px-0 px-10">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className=" lg:w-[30%] container mb-10 lg:px-0 px-10"
+      >
         <h1 className=" gradient-text lg:text-3xl text-xl font-semibold text-center">
           INSPIRATION, DELIVERED
         </h1>
-        <p className=" mb-2 lg:text-xl text-sm text-center">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className=" mb-2 lg:text-xl text-sm text-center"
+        >
           Discover our products, places, services and space
         </p>
-        <div className=" relative group">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className=" relative group"
+        >
           <input
             type="text"
             name=""
@@ -89,7 +83,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="container flex lg:flex-row flex-col gap-5  items-center justify-around  ">
-        <div className=" flex justify-center items-center gap-4 flex-col">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className=" flex justify-center items-center gap-4 flex-col"
+        >
           <h1 className="text-xl font-semibold gradient-text ">About Us</h1>
           <div className="text-sm flex flex-col gap-2 justify-center items-center">
             <Link href={'/'}>Contact Us</Link>
@@ -98,7 +96,11 @@ const Footer = () => {
             <Link href={'/'}>License & CertificatedS</Link>
           </div>
         </div>
-        <div className=" flex justify-center items-center gap-4 flex-col">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className=" flex justify-center items-center gap-4 flex-col"
+        >
           <h1 className="text-xl font-semibold gradient-text ">OUR COMPANY</h1>
           <div className="text-sm flex flex-col gap-2 justify-center items-center">
             <Link href={'/'}>Product Catalog</Link>
@@ -107,7 +109,11 @@ const Footer = () => {
             <Link href={'/'}>Press</Link>
           </div>
         </div>
-        <div className=" flex justify-center items-center gap-4 flex-col">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className=" flex justify-center items-center gap-4 flex-col"
+        >
           <h1 className="text-xl font-semibold gradient-text ">
             CUSTOMER SERVICE
           </h1>
@@ -118,7 +124,11 @@ const Footer = () => {
             <Link href={'/'}>Delivery and Shipping Information</Link>
           </div>
         </div>
-        <div className=" flex justify-center items-center gap-4 flex-col">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className=" flex justify-center items-center gap-4 flex-col"
+        >
           <h1 className="text-xl font-semibold gradient-text ">Follow Us</h1>
           <SocialLinks classes={{ root: '!mb-0' }} />
           <div className=" flex gap-2 items-center">
@@ -132,7 +142,11 @@ const Footer = () => {
             <a href={mailtoLink}>{'sharminfurniture@gmail.com'}</a>
           </div>
         </div>
-        <div className=" flex justify-center items-center gap-4 flex-col">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className=" flex justify-center items-center gap-4 flex-col"
+        >
           <h1 className="text-xl font-semibold gradient-text ">We Accept</h1>
           <div className=" flex gap-2 items-center text-3xl">
             {' '}
@@ -155,50 +169,6 @@ const Footer = () => {
             src={'https://sslcommerz.com/wp-content/uploads/2021/11/logo.png'}
           />
         </div>
-        {/* <div className="lg:pb-8 grid grid-cols-1 lg:grid-cols-[2.43fr_1fr] gap-5 lg:gap-[143px] text-grey text-sm">
-          <div className="flex flex-col gap-6">
-            <div className="grid grid-cols-1 ">
-              {data?.map((item, i) => {
-                return (
-                  <div key={i}>
-                    <ul className="grid lg:grid-flow-col gap-8">
-                      {item?.children?.map((list, i) => {
-                        return (
-                          <li key={i}>
-                            <Link
-                              className="block text-p3 group"
-                              href={list.link}
-                            >
-                              <span className="group-hover:text-gradient transition-all">
-                                {list?.title}
-                              </span>
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
-            <SocialLinks classes={{ root: '!mb-0' }} />
-            <div className="container px-0">
-              Copyright {new Date().getFullYear()} World University Hub |
-              Developed By{' '}
-              <Link href={'https://m4yours.com/'}>M4YOURS IT.</Link> All Rights
-              Reserved
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <div>
-              <p className="text-p2 mb-4">
-                Subscribe to get latest update & news
-              </p>
-            
-            </div>
-          </div>
-        </div> */}
       </div>
     </footer>
   );

@@ -13,10 +13,13 @@ const CreationPurpose = () => {
   return (
     <div className=" container m-auto">
       <div
-        data-aos="zoom-in"
+        // data-aos="zoom-in"
         className=" w-full grid lg:grid-cols-[2fr_1fr_1fr_1fr] grid-cols-2 grid-rows-2 gap-2 mt-5 "
       >
-        <div className=" row-span-2 flex flex-col justify-center lg:items-end items-center lg:pl-0 gap-2 lg:mr-[50px]">
+        <div
+          data-aos="zoom-in-down"
+          className=" row-span-2 flex flex-col justify-center lg:items-end items-center lg:pl-0 gap-2 lg:mr-[50px]"
+        >
           <h1 className=" text-3xl font-bold">Creations with purpose</h1>
           <h2 className=" text-2xl font-normal gradient-text">
             Many choices based on your space
@@ -29,8 +32,10 @@ const CreationPurpose = () => {
         </div>
 
         {album.map((item: any, i: number) => {
+          const animation = i % 2;
           return (
             <div
+              data-aos={`${animation === 0 ? 'fade-right' : 'fade-left'}`}
               key={i}
               className="lg:h-[200px] lg:w-[300px] overflow-hidden rounded"
             >
