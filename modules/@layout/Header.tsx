@@ -60,10 +60,12 @@ const Header = () => {
     }
     setSelected(i);
   };
-  const [logo, setlogo] = useState('/sharmin-black.png');
+  const [logo, setlogo] = useState(
+    'https://i.ibb.co.com/BLMXFPV/Sharmin-black.png'
+  );
   useEffect(() => {
     () => {
-      setlogo('/sharmin-white.png');
+      setlogo('https://i.ibb.co.com/ZhsyH47/Sharmin-white.png');
     };
   }, []);
 
