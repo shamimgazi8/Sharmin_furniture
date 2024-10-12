@@ -56,7 +56,7 @@ function Accordion() {
             }`}
           />
           <div
-            className={`absolute bottom-5 left-5 flex items-center gap-3 p-5 bg-gradient-to-b from-transparent to-black/25 backdrop-blur-sm rounded-lg transition duration-250 ${
+            className={`absolute bottom-5 left-5 flex items-center gap-3 p-5 bg-gradient-to-b from-transparent to-black/25 text-white backdrop-blur-sm rounded-lg transition duration-250 ${
               activeIndex === index
                 ? 'opacity-100 visible'
                 : 'opacity-0 invisible'
