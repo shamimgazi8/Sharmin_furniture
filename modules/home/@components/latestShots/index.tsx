@@ -1,5 +1,4 @@
 import Accordion from '@/modules/@common/Accoradtion';
-import MultiSlider from '../multiCerasoul';
 
 const LatestShots = () => {
   return (

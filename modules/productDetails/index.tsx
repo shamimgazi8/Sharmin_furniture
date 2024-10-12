@@ -1,8 +1,10 @@
 'use client';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import MultiSlider from '../home/@components/multiCerasoul';
 import Tab from '../@common/Tabs';
+import CarouselNext from '../@common/Carousle-next';
+
+import MultiCarausol from '../@common/multiCarasoul';
 const ProductDetails = () => {
   const { productDetails } = useParams();
   const product = {
@@ -59,14 +61,22 @@ const ProductDetails = () => {
       </div>
       <div className=" mt-5 flex flex-col gap-3 justify-start items-center">
         <h1>YOU MAY ALSO LIKE</h1>
-        <MultiSlider height="300" width="400" itemsToShow={1} blogCart={true} />
+        <CarouselNext
+          images={[
+            'https://hatil-image.s3.ap-southeast-1.amazonaws.com/Nop_Image/_2LD2068.jpg',
+            'https://www.theinside.com/blog/wp-content/uploads/2022/09/kyliefitts_havenly_theinside_shelbynorwalk_69-1-scaled.jpg',
+            'https://cdn.media.amplience.net/i/shadesoflight/furniture_1?fmt=auto&w=575',
+            'https://www.bdfurnituresolution.com/images/stories/virtuemart/product/sunshine-bed-furniture-bdfs-dhaka.jpg',
+            'https://media.designcafe.com/wp-content/uploads/2021/12/27144355/design-cafe-modular-furniture-benefits.jpg',
+          ]}
+        />
       </div>
       <div className="w-[70%] col-span-2 mx-auto ">
         <Tab />
       </div>
-      <div className=" col-span-2 w-[70%] mx-auto flex justify-center items-center flex-col mt-5">
+      <div className=" col-span-2 w-[70%] mx-auto flex justify-center items-center flex-col mt-5 h-[300px] my-5">
         <h1 className=" text-3xl font-semibold">Related Products</h1>
-        <MultiSlider height="200" itemsToShow={4} blogCart={true} />
+        <MultiCarausol />
       </div>
     </div>
   );
