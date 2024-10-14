@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-const customData = [
-  'Row 1 Data',
-  'Row 2 Data',
-  'Row 3 Data',
-  'Row 4 Data',
-  'Row 5 Data',
-];
+import { CiHeart, CiShare1 } from 'react-icons/ci';
+import { FaBeer } from 'react-icons/fa';
+
+import { FiEye, FiShare2 } from 'react-icons/fi';
+import { IoIosList } from 'react-icons/io';
+const imageUrls = ['/1.png', '/2.png', '/5.png', '/3.png', '/4.png'];
+
+const customData = ['Erc721', 'View on Polygon Scan', 'Open original on IPFS'];
 const data = [
   [
     'Minted',
@@ -42,22 +43,80 @@ const TestDevelopment = () => {
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
   };
+
   return (
-    <div className=" h-full w-full bg-[#111111]">
+    <div className=" h-full w-full bg-[#161616]">
       <div className="w-[80%] m-auto py-[50px]">
         <div className="grid lg:grid-cols-2  text-white mb-[20px] rounded-lg shadow-lg space-y-6 md:space-y-0 md:space-x-6 ">
           {/* Left Section: Image and Info */}
           <div className="w-full md:w-full">
             <div className="relative h-full w-full">
-              {' '}
               {/* Set a specific height and width */}
-              <img
-                src="https://media.istockphoto.com/id/120251134/photo/pallas-athene-brunnen-vienna-b-w.jpg?s=612x612&w=0&k=20&c=-qYyRZZVP9fPgSByiz_TOInhNbzdT5r-tXMcNLMzWE4="
-                alt="NFT Art"
-                className="rounded-lg h-full w-full object-cover" // Make image cover the full div
+              <video
+                src="/demo" // Replace this with the path to your video file
+                className="rounded-lg h-full w-full object-cover" // Make video cover the full div
+                loop // Optional: Make the video loop
+                autoPlay // Optional: Automatically start playing the video
+                muted // Optional: Mute the video (useful if auto-playing)
               />
-              <div className="absolute top-2 right-2 bg-gray-700 rounded-full px-3 py-1 text-xs">
-                <span className="mr-1">❤️</span> 10
+
+              <div className="absolute top-2 right-2    text-xs flex gap-1 justify-center items-center">
+                <svg
+                  className="w-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="42"
+                  height="38"
+                  viewBox="0 0 42 38"
+                  fill="none"
+                >
+                  <g filter="url(#filter0_b_0_147)">
+                    <circle
+                      cx="23"
+                      cy="19"
+                      r="19"
+                      fill="black"
+                      fill-opacity="0.2"
+                    />
+                  </g>
+                  <path
+                    d="M22.9826 28.585C28.515 28.585 33 24.1078 33 18.585C33 13.0621 28.515 8.58496 22.9826 8.58496C17.7337 8.58496 13.4277 12.6149 13 17.7444H26.2408V19.4255H13C13.4277 24.555 17.7337 28.585 22.9826 28.585Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_b_0_147"
+                      x="-1.84615"
+                      y="-5.84615"
+                      width="49.6923"
+                      height="49.6923"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feGaussianBlur
+                        in="BackgroundImageFix"
+                        stdDeviation="2.92308"
+                      />
+                      <feComposite
+                        in2="SourceAlpha"
+                        operator="in"
+                        result="effect1_backgroundBlur_0_147"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_backgroundBlur_0_147"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+                <div className="flex gap-1 justify-center items-center backdrop-blur-lg rounded-full px-3 py-1">
+                  10
+                  <span className="mr-1">
+                    <CiHeart className="text-lg" />
+                  </span>{' '}
+                </div>
               </div>
             </div>
           </div>
@@ -67,25 +126,12 @@ const TestDevelopment = () => {
             {/* Title */}
             <div className="text-2xl font-bold flex justify-between items-center">
               <span>Themesflat #0270</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
-                />
-              </svg>
+              <FiShare2 className=" opacity-70" />
             </div>
 
             {/* Owners */}
             <div className="flex justify-between items-sart my-4 text-[12px]">
-              <div className="grid grid-cols-[40px_1fr] items-center justify-center">
+              <div className="grid grid-cols-[40px_1fr] items-center justify-center font-mono">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s"
                   alt="Owner"
@@ -94,7 +140,7 @@ const TestDevelopment = () => {
                 <span className="text-[12px] text-gray-400">Owned by:</span>
                 <span className="font-medium text-[12px]">Marvin McKinney</span>
               </div>
-              <div className="grid grid-cols-[40px_1fr] items-center justify-center">
+              <div className="grid grid-cols-[40px_1fr] items-center justify-center font-mono">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s"
                   alt="Owner"
@@ -106,9 +152,9 @@ const TestDevelopment = () => {
             </div>
 
             {/* Stats */}
-            <div className="flex justify-start items-center space-x-4 my-4 text-sm">
-              <button className=" border-[1px] border-white/20 px-3 py-[10px] rounded-[12px]">
-                👁️ 208 View
+            <div className="flex justify-start items-center space-x-4 mb-[30px] text-sm">
+              <button className=" border-[1px] border-white/20 px-3 py-[10px] rounded-[12px] flex justify-center items-center gap-1">
+                <FiEye /> 208 View
               </button>
               <button className=" border-[1px] border-white/20 px-3 py-[10px] rounded-[12px]">
                 Collectibles
@@ -116,56 +162,43 @@ const TestDevelopment = () => {
             </div>
 
             {/* Price Section */}
-            <div className="p-4 bg-[#232323] rounded-lg grid grid-cols-2 gap-2">
-              <div className="text-sm text-gray-400">Current price</div>
-              <button className=" border-[1px] border-white/20 px-2 py-[6px] rounded-[12px] mt-0 h-[30px] w-full text-[12px] flex justify-center items-center gap-1 hover:bg-white hover:text-black transition-all">
-                <svg
-                  className="w-4 mr-2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  width="100"
-                  height="100"
-                  viewBox="0 0 50 50"
-                >
-                  <path
-                    fill="#ffffff"
-                    d="M 4 4 L 4 44 A 2.0002 2.0002 0 0 0 6 46 L 44 46 A 2.0002 2.0002 0 0 0 46 44 L 46 32 L 42 32 L 42 42 L 8 42 L 8 4 L 4 4 z M 35.978516 4.9804688 A 2.0002 2.0002 0 0 0 34.585938 8.4140625 L 37.171875 11 L 36.048828 11 C 25.976906 10.74934 19.618605 12.315463 15.953125 16.726562 C 12.287645 21.137662 11.831327 27.512697 12 36.039062 A 2.0003814 2.0003814 0 1 0 16 35.960938 C 15.835673 27.654299 16.533777 22.2844 19.029297 19.28125 C 21.524817 16.2781 26.334094 14.76066 35.951172 15 L 35.974609 15 L 37.171875 15 L 34.585938 17.585938 A 2.0002 2.0002 0 1 0 37.414062 20.414062 L 43.236328 14.591797 A 2.0002 2.0002 0 0 0 43.619141 14.208984 L 44.828125 13 L 43.619141 11.791016 A 2.0002 2.0002 0 0 0 43.228516 11.400391 L 37.414062 5.5859375 A 2.0002 2.0002 0 0 0 35.978516 4.9804688 z"
-                  />
-                </svg>
+            <div className="p-4 bg-[#232323] rounded-[20px] grid grid-cols-[2fr_1fr] gap-2 mb-[20px]">
+              <div className="text-sm text-gray-400 font-mono">
+                Current price
+              </div>
+              <button className=" border-[1px] border-white/20 px-2 py-[6px] rounded-[8px] mt-0 h-[30px] w-full text-[12px] flex justify-center items-center gap-1 hover:bg-white hover:text-black transition-all">
+                <CiShare1 className=" text-lg" />
                 Check ETH Quotes
               </button>
               <div className="text-4xl font-bold">$1,000</div>
-              <button className="w-full bg-yellow-400 text-black p-[10px] rounded-lg font-semibold hover:bg-yellow-500 transition-all">
+              <button className="w-full bg-[#DDF247] text-black p-[10px] rounded-lg font-semibold hover:bg-yellow-500 transition-all">
                 Put on sale
               </button>
             </div>
 
             {/* Overview Section */}
-            <div className="mt-6 p-4 rounded-lg bg-[#232323] ">
+            <div className=" p-4 rounded-lg bg-[#232323] ">
               <div className="text-lg font-semibold">Overview</div>
-              <div className="w-full h-[1px] bg-white/20 my-[10px]"></div>
+              <div className="w-full h-[1px] bg-white opacity-20 my-[16px]"></div>
               <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
                 <div className=" w-full h-full flex flex-col justify-center items-center gap-2">
-                  <div className="flex justify-between items-center bg-[#302f2f] rounded border-[1px] border-white/20  text-[14px] w-full py-3 px-2">
+                  <div className="flex justify-between items-center bg-[#302f2f] rounded-[11px] border-[1px] border-white/20  text-[14px] w-full py-3 px-2">
                     <span className="text-sm text-white">Artist</span>
-                    <span className="font-semibold text-gray-400">
-                      Dhruv Swami
-                    </span>
+                    <span className="font-mono text-gray-400">Dhruv Swami</span>
                   </div>{' '}
-                  <div className="flex justify-between items-center bg-[#302f2f] rounded border-[1px] border-white/20  text-[14px] w-full py-3 px-2">
+                  <div className="flex justify-between items-center bg-[#302f2f] rounded-[11px] border-[1px] border-white/20  text-[14px] w-full py-3 px-2">
                     <span className="text-sm text-white">Shipping Country</span>
-                    <span className="font-semibold text-gray-400">India</span>
+                    <span className="font-mono text-gray-400">India</span>
                   </div>
-                  <div className="flex justify-between items-center bg-[#302f2f] rounded border-[1px] border-white/20  text-[14px] w-full py-3 px-2">
+                  <div className="flex justify-between items-center bg-[#302f2f] rounded-[11px] border-[1px] border-white/20  text-[14px] w-full py-3 px-2">
                     <span className="text-sm text-white">Royalties</span>
-                    <span className="font-semibold text-gray-400">13%</span>
+                    <span className="font-mono text-gray-400">13%</span>
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2 bg-gray-700 rounded border-[1px] border-white/20 py-1 px-2">
+                <div className="flex flex-col gap-2 bg-[#302f2f] rounded-[11px] border-[1px] border-white/20 py-1 px-2">
                   <span className="text-sm text-gray-400">Size</span>
-                  <div className="font-semibold flex gap-1 flex-col text-gray-400">
+                  <div className=" flex gap-1 flex-col text-gray-400 font-mono ">
                     <p>Length: 20cm</p>
                     <p>Height: 20cm</p>
                     <p>Width: 20cm</p>
@@ -178,12 +211,12 @@ const TestDevelopment = () => {
         </div>
         {/* Thumbnails */}
         <div className="w-full mt-6 md:mt-0 flex flex-wrap gap-2 justify-center items-center">
-          {Array.from({ length: 4 }).map((_, index) => (
+          {imageUrls.map((url, index) => (
             <img
               key={index}
-              src="https://images.unsplash.com/photo-1551047163-78c1a36ad573?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3RhdHVlfGVufDB8fDB8fHww"
+              src={url}
               alt={`Thumbnail ${index + 1}`}
-              className="flex-1 w-full sm:w-[calc(50%-4px)] md:w-[calc(33.33%-4px)] lg:w-[calc(20%-4px)] h-auto object-cover rounded-lg"
+              className="flex-1 w-[calc(20%-8px)] h-auto object-cover rounded-lg" // Adjust for any gap/margin
             />
           ))}
         </div>
@@ -207,7 +240,7 @@ const TestDevelopment = () => {
             Description
           </div>
           <div className="w-full h-[1px] bg-white/20 my-[10px]"></div>
-          <div className="text-gray-400">
+          <div className="text-gray-400 font-mono">
             {isExpanded ? (
               <>
                 8,888 NFTs of beautiful, Asian women painstakingly-crafted where
@@ -221,7 +254,7 @@ const TestDevelopment = () => {
                 details are steeped in historical significance. We envision
                 8SIAN being a global, inclusive community see more
                 <button
-                  className="text-[#DDF247] hover:underline ml-1"
+                  className="text-[#DDF247] hover:underline ml-1 font-mono"
                   onClick={toggleDescription}
                 >
                   See Less
@@ -280,13 +313,20 @@ const TestDevelopment = () => {
                 return (
                   <tr key={rowIndex} className={rowClass}>
                     {row.map((cell, colIndex) => {
+                      const fontMono = colIndex === 0 ? 'font-mono' : '';
                       const textColor =
                         colIndex === 2 || colIndex === 3
                           ? 'text-[#DDF247]'
                           : 'text-white';
 
                       return (
-                        <td key={colIndex} className={`${textColor} px-4 py-2`}>
+                        <td
+                          key={colIndex}
+                          className={`${textColor} ${fontMono} px-4 py-2`}
+                        >
+                          {colIndex === 0 ? (
+                            <IoIosList className="inline-block mr-2" />
+                          ) : null}
                           {cell}
                         </td>
                       );
@@ -335,10 +375,7 @@ const TestDevelopment = () => {
           </table>
         </div>
         <div>
-          <img
-            className=" w-full object-cover mt-[20px]"
-            src="https://img.freepik.com/free-vector/abstract-yellow-black-wide-banner-design_1017-30890.jpg"
-          />
+          <img className=" w-full object-cover mt-[20px]" src="/cover.png" />
         </div>
       </div>
     </div>
