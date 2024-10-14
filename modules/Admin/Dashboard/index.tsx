@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   DesktopOutlined,
   FileOutlined,
@@ -8,7 +8,8 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Layout, Menu, theme, Spin } from 'antd';
+import DashboardContent from './@components/DashboardContent';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -29,7 +30,7 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem('Option 1', '1', <PieChartOutlined />),
+  getItem('Dashboard', '1', <PieChartOutlined />),
   getItem('Option 2', '2', <DesktopOutlined />),
   getItem('User', 'sub1', <UserOutlined />, [
     getItem('Tom', '3'),
@@ -45,9 +46,28 @@ const items: MenuItem[] = [
 
 const DashboardPage: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [loading, setLoading] = useState(true); // Add loading state
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  // Simulate loading with useEffect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 1 second delay for loader, adjust as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // If loading, show loader
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Spin size="large" />
+      </div>
+    );
+  }
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -56,10 +76,11 @@ const DashboardPage: React.FC = () => {
         collapsed={collapsed}
         onCollapse={value => setCollapsed(value)}
       >
-        <div className=" mb-0 z-50">
+        <div className="mb-0 z-50">
           <img
             className="p-4"
             src="https://i.ibb.co.com/ZhsyH47/Sharmin-white.png"
+            alt="Sharmin Furniture"
           />
         </div>
         <Menu
@@ -73,7 +94,7 @@ const DashboardPage: React.FC = () => {
         <Content style={{ margin: '0 16px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>Admin</Breadcrumb.Item>
-            <Breadcrumb.Item>Dashbboard</Breadcrumb.Item>
+            <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
           </Breadcrumb>
           <div
             style={{
@@ -83,11 +104,13 @@ const DashboardPage: React.FC = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            Bill is a cat.
+            <div>
+              <DashboardContent />
+            </div>
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          All Right and Reserve ©{new Date().getFullYear()} Sharmin Furniture
+          All Rights Reserved ©{new Date().getFullYear()} Sharmin Furniture
         </Footer>
       </Layout>
     </Layout>
