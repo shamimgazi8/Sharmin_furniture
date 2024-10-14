@@ -45,7 +45,7 @@ const TestDevelopment = () => {
   return (
     <div className=" h-full w-full bg-[#111111]">
       <div className="w-[80%] m-auto py-[50px]">
-        <div className="grid grid-cols-2  text-white mb-[20px] rounded-lg shadow-lg space-y-6 md:space-y-0 md:space-x-6 ">
+        <div className="grid lg:grid-cols-2  text-white mb-[20px] rounded-lg shadow-lg space-y-6 md:space-y-0 md:space-x-6 ">
           {/* Left Section: Image and Info */}
           <div className="w-full md:w-full">
             <div className="relative h-full w-full">
@@ -118,7 +118,21 @@ const TestDevelopment = () => {
             {/* Price Section */}
             <div className="p-4 bg-[#232323] rounded-lg grid grid-cols-2 gap-2">
               <div className="text-sm text-gray-400">Current price</div>
-              <button className=" border-[1px] border-white/20 px-2 py-[6px] rounded-[12px] mt-0 h-[30px] w-full text-[12px]">
+              <button className=" border-[1px] border-white/20 px-2 py-[6px] rounded-[12px] mt-0 h-[30px] w-full text-[12px] flex justify-center items-center gap-1 hover:bg-white hover:text-black transition-all">
+                <svg
+                  className="w-4 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 50 50"
+                >
+                  <path
+                    fill="#ffffff"
+                    d="M 4 4 L 4 44 A 2.0002 2.0002 0 0 0 6 46 L 44 46 A 2.0002 2.0002 0 0 0 46 44 L 46 32 L 42 32 L 42 42 L 8 42 L 8 4 L 4 4 z M 35.978516 4.9804688 A 2.0002 2.0002 0 0 0 34.585938 8.4140625 L 37.171875 11 L 36.048828 11 C 25.976906 10.74934 19.618605 12.315463 15.953125 16.726562 C 12.287645 21.137662 11.831327 27.512697 12 36.039062 A 2.0003814 2.0003814 0 1 0 16 35.960938 C 15.835673 27.654299 16.533777 22.2844 19.029297 19.28125 C 21.524817 16.2781 26.334094 14.76066 35.951172 15 L 35.974609 15 L 37.171875 15 L 34.585938 17.585938 A 2.0002 2.0002 0 1 0 37.414062 20.414062 L 43.236328 14.591797 A 2.0002 2.0002 0 0 0 43.619141 14.208984 L 44.828125 13 L 43.619141 11.791016 A 2.0002 2.0002 0 0 0 43.228516 11.400391 L 37.414062 5.5859375 A 2.0002 2.0002 0 0 0 35.978516 4.9804688 z"
+                  />
+                </svg>
                 Check ETH Quotes
               </button>
               <div className="text-4xl font-bold">$1,000</div>
@@ -131,7 +145,7 @@ const TestDevelopment = () => {
             <div className="mt-6 p-4 rounded-lg bg-[#232323] ">
               <div className="text-lg font-semibold">Overview</div>
               <div className="w-full h-[1px] bg-white/20 my-[10px]"></div>
-              <div className="grid grid-cols-[2fr_1fr] gap-4">
+              <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
                 <div className=" w-full h-full flex flex-col justify-center items-center gap-2">
                   <div className="flex justify-between items-center bg-[#302f2f] rounded border-[1px] border-white/20  text-[14px] w-full py-3 px-2">
                     <span className="text-sm text-white">Artist</span>
@@ -229,7 +243,7 @@ const TestDevelopment = () => {
             )}
           </div>
         </div>
-        <div className="mt-6 p-4 rounded-lg bg-[#232323]">
+        <div className="mt-6 p-4 rounded-lg bg-[#232323] overflow-x-auto">
           <div className="text-lg font-semibold text-white ml-[15px] flex items-center gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +262,7 @@ const TestDevelopment = () => {
             Item activity
           </div>
           <div className="w-full h-[1px] bg-white/20 my-[10px]"></div>
-          <table className="min-w-full border-collapse">
+          <table className="min-w-full border-collapse sm:table-fixed md:table-auto lg:table-fixed">
             <thead>
               <tr>
                 {columnNames.map((columnName, index) => (
@@ -283,6 +297,7 @@ const TestDevelopment = () => {
             </tbody>
           </table>
         </div>
+
         <div className="mt-6 p-4 rounded-lg bg-[#232323]">
           <div className="text-lg font-semibold text-white ml-[15px] flex justify-start items-center gap-1">
             <svg
@@ -322,7 +337,7 @@ const TestDevelopment = () => {
         <div>
           <img
             className=" w-full object-cover mt-[20px]"
-            src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/newsletter-e-mail-header-logo-email-banner-design-template-1152f2dc9cde9e4d3307f35e33e5fa73_screen.jpg?ts=1603708061"
+            src="https://img.freepik.com/free-vector/abstract-yellow-black-wide-banner-design_1017-30890.jpg"
           />
         </div>
       </div>
